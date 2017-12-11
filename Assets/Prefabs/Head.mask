@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Head
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Body
+    m_Weight: 0
+  - m_Path: Dragon_Armature
+    m_Weight: 1
+  - m_Path: Dragon_Armature/Rump
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Leg_L_1
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Leg_L_1/Leg_L_2
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Leg_L_1/Leg_L_2/Leg_L_3
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Leg_L_1/Leg_L_2/Leg_L_3/Leg_L_3_end
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Leg_R_1
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Leg_R_1/Leg_R_2
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Leg_R_1/Leg_R_2/Leg_R_3
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Leg_R_1/Leg_R_2/Leg_R_3/Leg_R_3_end
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Tail_1
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Tail_1/Tail_2
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Tail_1/Tail_2/Tail_3
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Tail_1/Tail_2/Tail_3/Tail_4
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Tail_1/Tail_2/Tail_3/Tail_4/Tail_5
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Tail_1/Tail_2/Tail_3/Tail_4/Tail_5/Tail_5_end
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Waist
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Waist/Chest
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Waist/Chest/Arm_L_1
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Waist/Chest/Arm_L_1/Arm_L_2
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Waist/Chest/Arm_L_1/Arm_L_2/Arm_L_3
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Waist/Chest/Arm_L_1/Arm_L_2/Arm_L_3/Arm_L_3_end
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Waist/Chest/Arm_R_1
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Waist/Chest/Arm_R_1/Arm_R_2
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Waist/Chest/Arm_R_1/Arm_R_2/Arm_R_3
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Waist/Chest/Arm_R_1/Arm_R_2/Arm_R_3/Arm_R_3_end
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Waist/Chest/Neck_1
+    m_Weight: 1
+  - m_Path: Dragon_Armature/Rump/Waist/Chest/Neck_1/Neck_2
+    m_Weight: 1
+  - m_Path: Dragon_Armature/Rump/Waist/Chest/Neck_1/Neck_2/Head_D_1
+    m_Weight: 1
+  - m_Path: Dragon_Armature/Rump/Waist/Chest/Neck_1/Neck_2/Head_D_1/Head_D_2
+    m_Weight: 1
+  - m_Path: Dragon_Armature/Rump/Waist/Chest/Neck_1/Neck_2/Head_D_1/Head_D_2/Head_D_2_end
+    m_Weight: 1
+  - m_Path: Dragon_Armature/Rump/Waist/Chest/Neck_1/Neck_2/Head_U
+    m_Weight: 1
+  - m_Path: Dragon_Armature/Rump/Waist/Chest/Neck_1/Neck_2/Head_U/Head_U_end
+    m_Weight: 1
+  - m_Path: Dragon_Armature/Rump/Waist/Wing_L_1
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Waist/Wing_L_1/Wing_L_2
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Waist/Wing_L_1/Wing_L_2/Wing_L_3
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Waist/Wing_L_1/Wing_L_2/Wing_L_3/Wing_L_3_end
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Waist/Wing_R_1
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Waist/Wing_R_1/Wing_R_2
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Waist/Wing_R_1/Wing_R_2/Wing_R_3
+    m_Weight: 0
+  - m_Path: Dragon_Armature/Rump/Waist/Wing_R_1/Wing_R_2/Wing_R_3/Wing_R_3_end
+    m_Weight: 0
+  - m_Path: Horns
+    m_Weight: 0
+  - m_Path: Tail
+    m_Weight: 0
+  - m_Path: Wings
+    m_Weight: 0
