@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -139,7 +139,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 54859951}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 636.5, y: 323, z: 0}
+  m_LocalPosition: {x: 209, y: 138, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1319748916}
@@ -229,10 +229,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CloudPref: {fileID: 1953326537620460, guid: dea296a398bbd094ea9907a0f16f5786, type: 2}
   spawnArea:
-  - 0
-  - 0
-  layers: 0
-  firstLayerZ: 0
+  - -1
+  - -1
+  layers: 3
+  firstLayerZ: -50
   layerDist: 200
 --- !u!4 &232905191
 Transform:
@@ -547,12 +547,12 @@ Prefab:
     - target: {fileID: 224821521308720822, guid: b7f8f0d066351604685efc037e042236,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 636.5
+      value: 209
       objectReference: {fileID: 0}
     - target: {fileID: 224821521308720822, guid: b7f8f0d066351604685efc037e042236,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 323
+      value: 138
       objectReference: {fileID: 0}
     - target: {fileID: 224821521308720822, guid: b7f8f0d066351604685efc037e042236,
         type: 2}
@@ -662,7 +662,7 @@ Prefab:
     - target: {fileID: 224938735529158460, guid: b7f8f0d066351604685efc037e042236,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 77.5
       objectReference: {fileID: 0}
     - target: {fileID: 224757256191889858, guid: b7f8f0d066351604685efc037e042236,
         type: 2}
@@ -692,7 +692,7 @@ Prefab:
     - target: {fileID: 224609160619362344, guid: b7f8f0d066351604685efc037e042236,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: -323.09406
       objectReference: {fileID: 0}
     - target: {fileID: 224566331851382668, guid: b7f8f0d066351604685efc037e042236,
         type: 2}
@@ -782,7 +782,7 @@ Prefab:
     - target: {fileID: 224277421217180412, guid: b7f8f0d066351604685efc037e042236,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 77.5
       objectReference: {fileID: 0}
     - target: {fileID: 224183460010613562, guid: b7f8f0d066351604685efc037e042236,
         type: 2}
@@ -792,7 +792,7 @@ Prefab:
     - target: {fileID: 224183460010613562, guid: b7f8f0d066351604685efc037e042236,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: 77.5
       objectReference: {fileID: 0}
     - target: {fileID: 224131026099110208, guid: b7f8f0d066351604685efc037e042236,
         type: 2}
