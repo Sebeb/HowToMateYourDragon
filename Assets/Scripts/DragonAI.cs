@@ -36,15 +36,16 @@ public class DragonAI : MonoBehaviour {
         attack = GetComponent<Attack>();
         updateWandering();
         StartCoroutine(wanderUpdater());
+        
     }
-	
+
 	void Update () {
         Vector2 goal;
 
         if (Vector2.Distance(wandergoal, transform.position) < 100) {
             updateWandering();
         }
-        
+
         // Raycast ahead
         int oldLayer = gameObject.layer;
         gameObject.layer = LayerMask.NameToLayer("UI");
@@ -68,7 +69,7 @@ public class DragonAI : MonoBehaviour {
             if (state <= aggresssiveness) {
                 mood = moods.aggressive;
             }
-            else if (state > aggresssiveness && state <= aggresssiveness+cowardliness) { 
+            else if (state > aggresssiveness && state <= aggresssiveness+cowardliness) {
                 mood = moods.fleeing;
             }
             else {
@@ -81,7 +82,7 @@ public class DragonAI : MonoBehaviour {
         }
 
         // -------
-        
+
         if (memorycooldown > 0) { // Remember player
             remember = true;
         }
@@ -97,7 +98,7 @@ public class DragonAI : MonoBehaviour {
             else { // Sees something else
                 goal = seesObject();
             }
-            
+
         }
 
         else { // Sees nothing
@@ -134,7 +135,7 @@ public class DragonAI : MonoBehaviour {
             return wandergoal;
         }
     }
-  
+
 
     Vector2 seesObject() {
         DragonMain isdragon = (sees.GetComponent(typeof(DragonMain)) as DragonMain);
