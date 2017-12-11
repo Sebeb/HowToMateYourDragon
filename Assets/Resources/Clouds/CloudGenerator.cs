@@ -10,15 +10,18 @@ public class CloudGenerator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		int spriteOrder = 0;
         clouds = new GameObject[cloudAmount];
         CloudPrefabs = Resources.LoadAll<Sprite>("Clouds");
-        print(CloudPrefabs.Length);
+//        print(CloudPrefabs.Length);
         for (int i = 0; i < cloudAmount; i++)
         {
+			spriteOrder++;
             clouds[i] = Instantiate(CloudPref);
             clouds[i].transform.position = new Vector3(Random.Range(-1000, Game.controller.worldSize[0] + 900)
                 , Random.Range(-500, Game.controller.worldSize[1] + 500), -10 + 200 * Random.Range(0, 3));
             clouds[i].GetComponent<SpriteRenderer>().sprite = CloudPrefabs[Random.Range(0, CloudPrefabs.Length - 1)];
+			clouds [i].GetComponent<SpriteRenderer> ().sortingOrder = spriteOrder;
             clouds[i].transform.parent = transform;
             clouds[i].transform.localScale = Vector3.one * Random.Range(10, 40);
         }

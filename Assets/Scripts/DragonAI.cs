@@ -29,7 +29,7 @@ public class DragonAI : MonoBehaviour {
     public Vector2 wandergoal;
     public bool up;
 
-	// Use this for initialization
+
 	void Start () {
         dragon = GetComponent<DragonMain>();
         movement = GetComponent<DragonMovement>();

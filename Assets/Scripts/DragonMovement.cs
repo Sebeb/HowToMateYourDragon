@@ -113,10 +113,10 @@ public class DragonMovement : MonoBehaviour {
         if (transform.rotation.eulerAngles.z > 90 && transform.rotation.eulerAngles.z < 270)
         {
             if (transform.localScale.y>0)
-                transform.localScale = new Vector3(transform.localScale.x,-transform.localScale.y,transform.localScale.z);
+                transform.localScale = new Vector3(transform.localScale.x,-transform.localScale.y,-transform.localScale.z);
         }
         else if (transform.localScale.y <0)
-            transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y, -transform.localScale.z);
 
         // Show the Animator how fast the dragon is
         anim.SetFloat("Speed", velocityMag / terminalVelocity);
