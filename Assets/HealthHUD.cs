@@ -14,13 +14,13 @@ public class HealthHUD : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         if (player)
             image.fillAmount = (float)Game.player.currentHealth / (float)Game.player.maxHealth;
         else if (Game.controller.target != null)
             image.fillAmount = (float)Game.controller.target.currentHealth / (float)Game.controller.target.maxHealth;
         else
             image.fillAmount = 0;
-		transform.position = Camera.main.WorldToScreenPoint (Game.player.transform.position + (Vector3)offset);
+		//transform.position = Camera.main.WorldToScreenPoint (Game.player.transform.position + (Vector3)offset);
 	}
 }
