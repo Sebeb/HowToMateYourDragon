@@ -130,7 +130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &54859952
 RectTransform:
   m_ObjectHideFlags: 0
@@ -228,6 +228,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CloudPref: {fileID: 1953326537620460, guid: dea296a398bbd094ea9907a0f16f5786, type: 2}
+  spawnArea:
+  - 0
+  - 0
+  layers: 0
+  firstLayerZ: 0
+  layerDist: 200
 --- !u!4 &232905191
 Transform:
   m_ObjectHideFlags: 0
@@ -831,6 +837,10 @@ Prefab:
     - target: {fileID: 1248768275858478, guid: b7f8f0d066351604685efc037e042236, type: 2}
       propertyPath: m_Name
       value: HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094421550862218, guid: b7f8f0d066351604685efc037e042236, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7f8f0d066351604685efc037e042236, type: 2}

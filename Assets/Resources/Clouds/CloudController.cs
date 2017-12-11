@@ -13,9 +13,9 @@ public class CloudController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.position += Vector3.right * speed * Time.deltaTime;
-        if (transform.position.x >= Game.controller.worldSize[0] + returnDist)
-            transform.position -= Vector3.left * (Game.controller.worldSize[0] + returnDist * 2);
+        transform.position += Vector3.right * speed * Time.deltaTime * 4;
+        //if (transform.position.x >= 700 + returnDist)
+        //    transform.position -= Vector3.left * (Game.controller.worldSize[0] + returnDist * 2);
 
 
     }
