@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 61521220}
   - component: {fileID: 61521219}
   m_Layer: 0
-  m_Name: New Sprite (1)
+  m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -756,7 +756,7 @@ GameObject:
   - component: {fileID: 440741271}
   - component: {fileID: 440741270}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
