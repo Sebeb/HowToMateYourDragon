@@ -96,10 +96,11 @@ public class Attack : MonoBehaviour {
 
     void Die()
     {
-        if (dragon.isPlayer)
-            Game.controller.Lose();
-        else
-            Game.player.AbsorbAttributes(dragon);
+		if (dragon.isPlayer)
+			Game.controller.Lose ();
+		else {
+			Game.player.AbsorbAttributes (dragon);
+		}
         Destroy(gameObject);
     }
 

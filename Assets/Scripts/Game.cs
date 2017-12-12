@@ -15,6 +15,7 @@ public class Game : MonoBehaviour {
     public DragonMain thePlayer;
     public Color[] dragonColours;
     public DragonMain target;
+	public GameObject HUD;
 
     public enum Elements { air, fire, rock, water };
     public enum Properties { horns, wings, tail, colour };

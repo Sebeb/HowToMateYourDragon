@@ -9,6 +9,7 @@ public class DragonMain : MonoBehaviour {
 
     public int maxHealth;
     public int currentHealth = 100;
+	public GameObject lifeAnchor;
     public int damage = 40;
     public float boostEnergy = 100;
     public float relativeBoostSpeed = 1;
@@ -44,7 +45,6 @@ public class DragonMain : MonoBehaviour {
 
     Animator anim;
 
-
     void Start(){
         anim = GetComponent<Animator>();
         maxHealth = currentHealth;
@@ -56,6 +56,8 @@ public class DragonMain : MonoBehaviour {
             currentColour = (Game.Colour)Random.Range(0, 3);
         }
         UpdateAttributes();
+		GameObject lifeHeart = Instantiate (Resources.Load ("UI/Life Heart") as GameObject, Game.controller.HUD.transform);
+		lifeHeart.GetComponent<HealthHUD> ().target = this;
     }
 
     public void AbsorbAttributes(DragonMain other)
@@ -127,10 +129,10 @@ public class DragonMain : MonoBehaviour {
                 colourCount = 1;
             }
         }
-
+		UpdateAttributes ();
     }
 
-    void UpdateAttributes()
+    public void UpdateAttributes()
     {
         switch (currentHorns)
         {

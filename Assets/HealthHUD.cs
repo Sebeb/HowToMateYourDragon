@@ -6,21 +6,21 @@ using UnityEngine.UI;
 public class HealthHUD : MonoBehaviour {
     Image image;
 	public Vector2 offset;
+	public DragonMain target;
 
-    public bool player;
-	// Use this for initialization
 	void Awake () {
         image = GetComponent<Image>();
 	}
 	
-	// Update is called once per frame
-	void FixedUpdate () {
-        if (player)
-            image.fillAmount = (float)Game.player.currentHealth / (float)Game.player.maxHealth;
-        else if (Game.controller.target != null)
-            image.fillAmount = (float)Game.controller.target.currentHealth / (float)Game.controller.target.maxHealth;
-        else
-            image.fillAmount = 0;
-		//transform.position = Camera.main.WorldToScreenPoint (Game.player.transform.position + (Vector3)offset);
+
+	void Update () {
+		if (target != null)
+			image.fillAmount = (float)target.currentHealth / (float)target.maxHealth;
+		else
+			Destroy (gameObject);
+	}
+
+	void LateUpdate(){
+		transform.position = Camera.main.WorldToScreenPoint (target.lifeAnchor.transform.position + (Vector3)offset);
 	}
 }
