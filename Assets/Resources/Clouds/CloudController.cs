@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CloudController : MonoBehaviour {
-    public float speed = 2;
-    private int returnDist = 2000;
+    private float speed = 10;
+    public int returnDist;
+    public float worldSizeX;
 
     // Use this for initialization
     void Start () {
@@ -13,9 +14,9 @@ public class CloudController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.position += Vector3.right * speed * Time.deltaTime * 4;
-        if (transform.position.x >= 700 + returnDist)
-            transform.position -= Vector3.left * (Game.controller.worldSize[0] + returnDist * 2);
+        transform.position += Vector3.right * speed * Time.deltaTime;
+        if (transform.position.x >= worldSizeX + returnDist)
+            transform.position += Vector3.left * (worldSizeX + returnDist * 2);
 
 
     }

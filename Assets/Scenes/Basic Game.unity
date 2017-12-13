@@ -231,9 +231,9 @@ MonoBehaviour:
   spawnArea:
   - -1
   - -1
-  layers: 3
-  firstLayerZ: -50
-  layerDist: 200
+  layers: 5
+  firstLayerZ: -40
+  layerDist: 100
 --- !u!4 &232905191
 Transform:
   m_ObjectHideFlags: 0
