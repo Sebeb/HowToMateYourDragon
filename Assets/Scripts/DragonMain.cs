@@ -115,9 +115,10 @@ public class DragonMain : MonoBehaviour {
             if (storedColour == other.currentColour)
             {
                 colourCount++;
-                if (hornsCount == 3)
+                if (colourCount == 3)
                 {
                     currentColour = storedColour;
+                    print("current color is: " + currentColour);
                     colourCount = 0;
                 }
             }
@@ -127,7 +128,8 @@ public class DragonMain : MonoBehaviour {
                 colourCount = 1;
             }
         }
-
+        print("Absorbed something");
+        UpdateAttributes();
     }
 
     void UpdateAttributes()
@@ -183,6 +185,7 @@ public class DragonMain : MonoBehaviour {
     }
 
     void SetTexture(SkinnedMeshRenderer mesh, Game.Elements element){
+
         if (currentColour == Game.Colour.blue)
             mesh.material.SetTexture("_MainTex",blueTextures[(int)element]);
         if (currentColour == Game.Colour.green)
