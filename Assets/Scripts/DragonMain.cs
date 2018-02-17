@@ -44,10 +44,24 @@ public class DragonMain : MonoBehaviour {
 
     Animator anim;
 
+    public Texture[][] GetTextures() {
+        Texture[][] ret = new Texture[4][];
+        ret[0] = blueTextures;
+        ret[1] = greenTextures;
+        ret[2] = redTextures;
+        ret[3] = yellowTextures;
+        return ret;
+    }
 
     void Start(){
         anim = GetComponent<Animator>();
         maxHealth = currentHealth;
+        GetAttributes();
+        
+    }
+
+    public void GetAttributes()
+    {
         if (randomise)
         {
             currentHorns = (Game.Elements)Random.Range(0, 3);
@@ -118,7 +132,6 @@ public class DragonMain : MonoBehaviour {
                 if (colourCount == 3)
                 {
                     currentColour = storedColour;
-                    print("current color is: " + currentColour);
                     colourCount = 0;
                 }
             }
@@ -128,7 +141,6 @@ public class DragonMain : MonoBehaviour {
                 colourCount = 1;
             }
         }
-        print("Absorbed something");
         UpdateAttributes();
     }
 
@@ -181,7 +193,8 @@ public class DragonMain : MonoBehaviour {
                 break;
         }
         SetTexture(bodyMesh, 0);
-        GetComponent<TrailRenderer>().startColor = Game.controller.dragonColours[(int)currentColour];
+        if (GetComponent<TrailRenderer>() != null && Game.controller != null)
+            GetComponent<TrailRenderer>().startColor = Game.controller.dragonColours[(int)currentColour];
     }
 
     void SetTexture(SkinnedMeshRenderer mesh, Game.Elements element){
