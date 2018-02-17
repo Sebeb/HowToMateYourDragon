@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 043c28e642584d54ab3e9c56201f25b3
-timeCreated: 1512844279
+timeCreated: 1518905332
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -131,6 +131,17 @@ ModelImporter:
     7400054: Tail|PlaneAction
     7400056: Body|PlaneAction
     7400058: Wings|PlaneAction
+    7400060: Dragon_Armature|PlaneAction.001
+    7400062: Dragon_Armature|Runestone_Head_1
+    7400064: Dragon_Armature|Runestone_Head_2
+    7400066: Dragon_Armature|Runestone_Head_3
+    7400068: Dragon_Armature|Runestone_Head_4
+    7400070: Dragon_Armature|Runestone_Idle
+    7400072: Dragon_Armature|Runestone_Start
+    7400074: Wings|PlaneAction.001
+    7400076: Horns|PlaneAction.001
+    7400078: Tail|PlaneAction.001
+    7400080: Body|PlaneAction.001
     9500000: //RootNode
     13700000: Body
     13700002: Horns

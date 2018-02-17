@@ -27,12 +27,15 @@ public class Game : MonoBehaviour {
     public GameObject enemy;
 
     public List<int> highscores;
+    public static float newSceneTimer = -20;
 
 	void Awake () {
         controller = this;
         zPlane = new Plane(new Vector3(1, 0, 0), new Vector3(0, 1, 0), Vector3.zero);
         player = thePlayer;
-	}
+        player.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+
+    }
 
     void Start()
     {
@@ -136,7 +139,20 @@ public class Game : MonoBehaviour {
         secondsRemaining = Mathf.Clamp(gameLengthSeconds - ((int)Time.unscaledTime) - gameStartTime,0,gameLengthSeconds);
         //if (secondsRemaining == 0)
         //    EndGame();
-            
+        if (newSceneTimer > 0)
+        {
+            newSceneTimer -= Time.deltaTime;
+        }
+        if (newSceneTimer <= 0 && newSceneTimer > -10)
+        {
+            newSceneTimer = -20;
+            MoveObjectToNewScene.GoToLoadedScene();
+            Rigidbody2D playerRb = player.gameObject.GetComponent<Rigidbody2D>();
+            playerRb.isKinematic = false;
+            player.transform.position = Vector3.zero;
+            player.transform.eulerAngles.Set(0, 0, 0);
+        }
+
     }
 
     public Vector3 ScreenToZ(Vector3 screenPoint)

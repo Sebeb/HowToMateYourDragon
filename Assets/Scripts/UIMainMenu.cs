@@ -31,18 +31,20 @@ public class UIMainMenu : MonoBehaviour {
         switchMenu();
         anim.SetBool("shouldStart", true);
         
-        MoveObjectToNewScene.LoadScene("Basic Game", objectsToMove);
-        // StartCoroutine(Sequence());
+        StartCoroutine(Sequence());
     }
 
     IEnumerator Sequence()
     {
         yield return new WaitForSeconds(sequenceDur);
+        MoveObjectToNewScene.LoadScene("Basic Game", objectsToMove, 0);
+        /*
         SceneManager.LoadScene("Basic Game");
         Scene mainGameScene = SceneManager.GetSceneByName("Basic Game");
         // Object.DontDestroyOnLoad(player.gameObject);
         foreach (GameObject go in objectsToMove)
             SceneManager.MoveGameObjectToScene(go, mainGameScene);
+            */
     }
 
     public void HowToPlayBtn()
