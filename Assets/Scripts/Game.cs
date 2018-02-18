@@ -55,7 +55,7 @@ public class Game : MonoBehaviour {
         playerRb.isKinematic = false;
         player.transform.position = Vector3.zero;
         player.transform.eulerAngles = Vector3.zero;
-        player.transform.localScale = Vector3.one * 4;
+        player.transform.localScale = new Vector3(-4, 4, -4); // Vector3.one * 4;
         status = "Basic Game";
         foreach (GameObject go in spawnedDragons)
         {
