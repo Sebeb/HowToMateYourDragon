@@ -37,7 +37,7 @@ public class UIMainMenu : MonoBehaviour {
     IEnumerator Sequence()
     {
         yield return new WaitForSeconds(sequenceDur);
-        MoveObjectToNewScene.LoadScene("Basic Game", objectsToMove, 0);
+        MoveObjectToNewScene.LoadScene("Basic Game", objectsToMove);
         /*
         SceneManager.LoadScene("Basic Game");
         Scene mainGameScene = SceneManager.GetSceneByName("Basic Game");

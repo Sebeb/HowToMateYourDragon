@@ -27,7 +27,6 @@ public class Game : MonoBehaviour {
     public GameObject enemy;
 
     public List<int> highscores;
-    public static float newSceneTimer = -20;
 
 	void Awake () {
         controller = this;
@@ -139,18 +138,14 @@ public class Game : MonoBehaviour {
         secondsRemaining = Mathf.Clamp(gameLengthSeconds - ((int)Time.unscaledTime) - gameStartTime,0,gameLengthSeconds);
         //if (secondsRemaining == 0)
         //    EndGame();
-        if (newSceneTimer > 0)
-        {
-            newSceneTimer -= Time.deltaTime;
-        }
-        if (newSceneTimer <= 0 && newSceneTimer > -10)
-        {
-            newSceneTimer = -20;
+        
+        if (MoveObjectToNewScene.shouldLoadNewScene) { 
             MoveObjectToNewScene.GoToLoadedScene();
             Rigidbody2D playerRb = player.gameObject.GetComponent<Rigidbody2D>();
             playerRb.isKinematic = false;
             player.transform.position = Vector3.zero;
-            player.transform.eulerAngles.Set(0, 0, 0);
+            player.transform.eulerAngles = Vector3.zero;
+            player.transform.localScale = Vector3.one * 4;
         }
 
     }

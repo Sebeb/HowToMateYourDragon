@@ -1691,7 +1691,7 @@ MonoBehaviour:
   idealColour: 0
   hatesColour: 0
   spawnedDragons: []
-  dragonsPerLevel: 20
+  dragonsPerLevel: 0
   enemy: {fileID: 1151377324776180, guid: b02ee2c602abd42f4a93baddd0925811, type: 2}
   highscores: 
 --- !u!4 &1065832785
@@ -2404,12 +2404,12 @@ Prefab:
     - target: {fileID: 114375250847779652, guid: dff5e30a3236e45e991d99d1350b58c8,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114282750707407174, guid: dff5e30a3236e45e991d99d1350b58c8,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 95481533901153560, guid: dff5e30a3236e45e991d99d1350b58c8,
         type: 2}

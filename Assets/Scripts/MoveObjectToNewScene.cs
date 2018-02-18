@@ -8,16 +8,15 @@ static public class MoveObjectToNewScene
     static string targetSceneName;
     static Scene currentScene;
     static Scene newScene;
-    static bool shouldLoadNewScene = false;
+    public static bool shouldLoadNewScene = false;
 
     /// <summary>
     /// Move a GameObject from the current scene to another scene.
     /// </summary>
     /// <param name="sceneName">Name of the scene you want to load.</param>
     /// <param name="targetGameObjects">GameObject you want to move to the new scene.</param>
-    static public void LoadScene(string sceneName, GameObject[] targetGameObjects, float sequenceDur = 0)
+    static public void LoadScene(string sceneName, GameObject[] targetGameObjects)
     {
-        Game.newSceneTimer = sequenceDur;
         // set some globals
         targetObjects = targetGameObjects;
         targetSceneName = sceneName;
@@ -46,21 +45,18 @@ static public class MoveObjectToNewScene
 
     static public void GoToLoadedScene()
     {
-        if (shouldLoadNewScene)
-        {
-            shouldLoadNewScene = false;
-            // remove this method from the sceneLoaded delegate
-            SceneManager.sceneLoaded -= SceneLoaded;
+        shouldLoadNewScene = false;
+        // remove this method from the sceneLoaded delegate
+        SceneManager.sceneLoaded -= SceneLoaded;
 
-            // get the scene we just loaded into the background
-            newScene = SceneManager.GetSceneByName(targetSceneName);
+        // get the scene we just loaded into the background
+        newScene = SceneManager.GetSceneByName(targetSceneName);
 
-            // move the gameobjects from scene A to scene B
-            foreach (GameObject go in targetObjects)
-                SceneManager.MoveGameObjectToScene(go, newScene);
+        // move the gameobjects from scene A to scene B
+        foreach (GameObject go in targetObjects)
+            SceneManager.MoveGameObjectToScene(go, newScene);
 
-            // unload scene A
-            SceneManager.UnloadSceneAsync(currentScene);
-        }
+        // unload scene A
+        SceneManager.UnloadSceneAsync(currentScene);
     }
 }
