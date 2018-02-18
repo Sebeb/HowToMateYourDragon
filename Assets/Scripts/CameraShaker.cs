@@ -11,7 +11,7 @@ public class CameraShaker : MonoBehaviour
     [SerializeField] static float shakeOffsetMul = 1;
     [SerializeField] static float shakeFreq = .05f;
 
-    public GameObject target;
+    GameObject target;
 
     public static bool shouldShake;
 
@@ -22,6 +22,7 @@ public class CameraShaker : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+
         target = GetComponent<CameraFollow>().target;
     }
 
