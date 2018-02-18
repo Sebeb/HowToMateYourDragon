@@ -27,6 +27,8 @@ public class Game : MonoBehaviour {
     public GameObject enemy;
 
     public List<int> highscores;
+    public static string status = "MainMenu";
+    public GameObject enemies;
 
 	void Awake () {
         controller = this;
@@ -38,16 +40,29 @@ public class Game : MonoBehaviour {
 
     void Start()
     {
-        InitialiseGame();
-        gameStartTime = (int)Time.unscaledTime;
+
+        RandomiseIdealDragon(); // should be in InitialiseGamel, but Im not sure if that works
+        for (int i = 0; i < dragonsPerLevel; i++)
+        {
+            SpawnDragon(false, Properties.tail, false);
+        }
+        //InitialiseGame();
     }
 
     public void InitialiseGame(){
-        RandomiseIdealDragon();
-        for (int i = 0; i < dragonsPerLevel; i++)
+        MoveObjectToNewScene.GoToLoadedScene();
+        Rigidbody2D playerRb = player.gameObject.GetComponent<Rigidbody2D>();
+        playerRb.isKinematic = false;
+        player.transform.position = Vector3.zero;
+        player.transform.eulerAngles = Vector3.zero;
+        player.transform.localScale = Vector3.one * 4;
+        status = "Basic Game";
+        foreach (GameObject go in spawnedDragons)
         {
-            SpawnDragon(false,Properties.tail);
+            go.SetActive(true);
+            go.GetComponent<Animator>().SetBool("gameStarted", true);
         }
+        gameStartTime = (int)Time.unscaledTime;
     }
 
     void RandomiseIdealDragon(){
@@ -73,7 +88,7 @@ public class Game : MonoBehaviour {
         }
     }
 
-    void SpawnDragon(bool setProperty, Properties set){
+    void SpawnDragon(bool setProperty, Properties set, bool activate){
         Vector2 spawnPosition = new Vector2(Random.Range(-worldSize.x, worldSize.x), Random.Range(-worldSize.y, worldSize.y));
         int spawnSide = Random.Range(1, 5);
         switch (spawnSide){
@@ -92,6 +107,8 @@ public class Game : MonoBehaviour {
             }
         GameObject newDragon = Instantiate(enemy, spawnPosition, Quaternion.identity);
         spawnedDragons.Add(newDragon);
+        newDragon.transform.parent = enemies.transform;
+        newDragon.SetActive(activate);
         if (setProperty){
             switch (set)
             {
@@ -139,13 +156,11 @@ public class Game : MonoBehaviour {
         //if (secondsRemaining == 0)
         //    EndGame();
         
-        if (MoveObjectToNewScene.shouldLoadNewScene) { 
-            MoveObjectToNewScene.GoToLoadedScene();
-            Rigidbody2D playerRb = player.gameObject.GetComponent<Rigidbody2D>();
-            playerRb.isKinematic = false;
-            player.transform.position = Vector3.zero;
-            player.transform.eulerAngles = Vector3.zero;
-            player.transform.localScale = Vector3.one * 4;
+        if (MoveObjectToNewScene.shouldLoadNewScene) {
+            if (MoveObjectToNewScene.targetSceneName.Equals("Basic Game"))
+            {
+                InitialiseGame();
+            }
         }
 
     }

@@ -56,6 +56,8 @@ public class DragonMovement : MonoBehaviour {
 	void FixedUpdate () {
         //if (UIMainMenu.isPaused && GetComponent<DragonMain>().isPlayer)
         //    return;
+        if (!Game.status.Equals("Basic Game"))
+            return;
         if (dragon.isPlayer)
         {
             if (Input.GetButton("Boost"))

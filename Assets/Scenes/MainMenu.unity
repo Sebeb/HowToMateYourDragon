@@ -528,7 +528,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 114580255}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 207, y: 148, z: 0}
+  m_LocalPosition: {x: 207.5, y: 148, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1998719115}
@@ -1520,6 +1520,7 @@ MonoBehaviour:
   objectsToMove:
   - {fileID: 2118730718}
   - {fileID: 1065832783}
+  - {fileID: 1302940077}
   anim: {fileID: 2118730725}
 --- !u!4 &1041263021
 Transform:
@@ -1691,9 +1692,10 @@ MonoBehaviour:
   idealColour: 0
   hatesColour: 0
   spawnedDragons: []
-  dragonsPerLevel: 0
+  dragonsPerLevel: 20
   enemy: {fileID: 1151377324776180, guid: b02ee2c602abd42f4a93baddd0925811, type: 2}
   highscores: 
+  enemies: {fileID: 1302940077}
 --- !u!4 &1065832785
 Transform:
   m_ObjectHideFlags: 0
@@ -1925,6 +1927,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1988510661}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1302940077
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1302940078}
+  m_Layer: 0
+  m_Name: enemies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1302940078
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1302940077}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -30.99812, y: 5.7700157, z: -2.388504}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1447878157
 GameObject:
@@ -2399,7 +2429,7 @@ Prefab:
     - target: {fileID: 114609294519355314, guid: dff5e30a3236e45e991d99d1350b58c8,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114375250847779652, guid: dff5e30a3236e45e991d99d1350b58c8,
         type: 2}

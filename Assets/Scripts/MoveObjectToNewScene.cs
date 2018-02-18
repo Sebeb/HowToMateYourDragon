@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 static public class MoveObjectToNewScene
 {
     static GameObject[] targetObjects;
-    static string targetSceneName;
+    public static string targetSceneName;
     static Scene currentScene;
     static Scene newScene;
     public static bool shouldLoadNewScene = false;
