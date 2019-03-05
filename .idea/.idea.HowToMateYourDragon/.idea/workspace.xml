@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3aa3b2b-545f-46e3-95c2-76349131de63" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HowToMateYourDragon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HowToMateYourDragon/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Basic Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Basic Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraShaker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraShaker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIMainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIMainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/CameraShaker.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+              <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
               <folding>
                 <marker date="1551787105437" expanded="false" signature="6:78" ph="..." />
                 <marker date="1551787105437" expanded="true" signature="121:2322" ph="{...}" />
@@ -32,18 +36,143 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/HornyScript.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <marker date="1551783733401" expanded="false" signature="6:78" ph="..." />
+                <marker date="1551783733401" expanded="true" signature="121:661" ph="{...}" />
+                <marker date="1551783733401" expanded="true" signature="164:221" ph="{...}" />
+                <marker date="1551783733401" expanded="true" signature="270:659" ph="{...}" />
+                <marker date="1551783733401" expanded="true" signature="335:653" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/NetworkLauncher.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="89" column="98" selection-start-line="89" selection-start-column="98" selection-end-line="89" selection-end-column="98" />
+              <folding>
+                <marker date="1551797985872" expanded="true" signature="6:119" ph="..." />
+                <marker date="1551797985872" expanded="true" signature="177:3511" ph="{...}" />
+                <marker date="1551797985872" expanded="true" signature="184:236" ph="Private Serializable Fields" />
+                <marker date="1551797985872" expanded="true" signature="242:870" ph="Private Fields" />
+                <marker date="1551797985872" expanded="true" signature="271:437" ph="/// This client's version number. Users are separated from each other by gameVersion (which allows you to make br ... " />
+                <marker date="1551797985872" expanded="true" signature="477:646" ph="/// The maximum number of players per room. When a room is full, it can't be joined by new players, and so new ro ... " />
+                <marker date="1551797985872" expanded="true" signature="877:1309" ph="MonoBehaviour CallBacks" />
+                <marker date="1551797985872" expanded="true" signature="915:1041" ph="/// MonoBehaviour method called on GameObject by Unity during early initialization phase. ... " />
+                <marker date="1551797985872" expanded="true" signature="1058:1293" ph="{...}" />
+                <marker date="1551797985872" expanded="true" signature="1073:1234" ph="/* ##Critical ... */" />
+                <marker date="1551797985872" expanded="true" signature="1316:2224" ph="Public Methods" />
+                <marker date="1551797985872" expanded="true" signature="1345:1570" ph="/// Start the connection process. ... " />
+                <marker date="1551797985872" expanded="true" signature="1596:2207" ph="{...}" />
+                <marker date="1551797985872" expanded="true" signature="1756:1979" ph="{...}" />
+                <marker date="1551797985872" expanded="true" signature="1992:2201" ph="{...}" />
+                <marker date="1551797985872" expanded="true" signature="2234:3509" ph="MonoBehaviourPunCallbacks Callbacks" />
+                <marker date="1551797985872" expanded="true" signature="2326:2595" ph="{...}" />
+                <marker date="1551797985872" expanded="true" signature="2660:2867" ph="{...}" />
+                <marker date="1551797985872" expanded="true" signature="2950:3357" ph="{...}" />
+                <marker date="1551797985872" expanded="true" signature="3398:3492" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/MultiplayerManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="21" selection-end-column="5" />
+              <folding>
+                <marker date="1551799802549" expanded="true" signature="6:136" ph="..." />
+                <marker date="1551799802549" expanded="true" signature="185:359" ph="{...}" />
+                <marker date="1551799802549" expanded="true" signature="257:278" ph="{...}" />
+                <marker date="1551799802549" expanded="true" signature="336:357" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Scripts/PlayerNameInputField.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="63" selection-start-line="63" selection-end-line="63" />
+              <folding>
+                <marker date="1550071206000" expanded="true" signature="0:575" ph="/*  Let the player input his name to be saved as the network player Name, viewed by alls players above each  whe ... */" />
+                <marker date="1550071206000" expanded="false" signature="583:617" ph="..." />
+                <marker date="1550071206000" expanded="true" signature="654:2069" ph="{...}" />
+                <marker date="1550071206000" expanded="true" signature="658:788" ph="/// Player name input field. Let the user input his name, will appear above the player in the game. ... " />
+                <marker date="1550071206000" expanded="true" signature="879:2067" ph="{...}" />
+                <marker date="1550071206000" expanded="true" signature="885:1019" ph="Private Constants" />
+                <marker date="1550071206000" expanded="true" signature="1023:1550" ph="MonoBehaviour CallBacks" />
+                <marker date="1550071206000" expanded="true" signature="1060:1176" ph="/// MonoBehaviour method called on GameObject by Unity during initialization phase. ... " />
+                <marker date="1550071206000" expanded="true" signature="1193:1536" ph="{...}" />
+                <marker date="1550071206000" expanded="true" signature="1323:1490" ph="{...}" />
+                <marker date="1550071206000" expanded="true" signature="1375:1485" ph="{...}" />
+                <marker date="1550071206000" expanded="true" signature="1556:2064" ph="Public Methods" />
+                <marker date="1550071206000" expanded="true" signature="1582:1756" ph="/// Sets the name of the player, and save it in the PlayerPrefs for future sessions. ... " />
+                <marker date="1550071206000" expanded="true" signature="1798:2048" ph="{...}" />
+                <marker date="1550071206000" expanded="true" signature="1858:1956" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/UIMainMenu.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="80" column="43" selection-start-line="80" selection-start-column="43" selection-end-line="80" selection-end-column="43" />
+              <folding>
+                <marker date="1551797431658" expanded="false" signature="6:113" ph="..." />
+                <marker date="1551797431658" expanded="true" signature="155:2155" ph="{...}" />
+                <marker date="1551797431658" expanded="true" signature="552:746" ph="/* void Start() ... */" />
+                <marker date="1551797431658" expanded="true" signature="773:896" ph="{...}" />
+                <marker date="1551797431658" expanded="true" signature="924:1376" ph="{...}" />
+                <marker date="1551797431658" expanded="true" signature="1062:1370" ph="/* SceneManager.LoadScene(&quot;Basic Game&quot;); ... */" />
+                <marker date="1551797431658" expanded="true" signature="1408:1516" ph="{...}" />
+                <marker date="1551797431658" expanded="true" signature="1546:1652" ph="{...}" />
+                <marker date="1551797431658" expanded="true" signature="1683:1723" ph="{...}" />
+                <marker date="1551797431658" expanded="true" signature="1750:1901" ph="{...}" />
+                <marker date="1551797431658" expanded="true" signature="1953:2106" ph="{...}" />
+                <marker date="1551797431658" expanded="true" signature="1968:2054" ph="/* foreach (GameObject btn in mainMenuButtons) ... */" />
+                <marker date="1551797431658" expanded="true" signature="2140:2153" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>CreateRoom</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HornyScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/NetworkLauncher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIMainMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Scripts/PlayerNameInputField.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraShaker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiplayerManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraShaker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UIMainMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NetworkLauncher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerManager.cs" />
       </list>
     </option>
   </component>
@@ -116,12 +245,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551786691429</updated>
-      <workItem from="1551786701929" duration="408000" />
+      <workItem from="1551786701929" duration="4584000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="408000" />
+    <option name="totallyTimeSpent" value="4584000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -189,7 +318,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/CameraShaker.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
           <folding>
             <marker date="1551787105437" expanded="false" signature="6:78" ph="..." />
             <marker date="1551787105437" expanded="true" signature="121:2322" ph="{...}" />
@@ -199,6 +328,108 @@
             <marker date="1551787105437" expanded="true" signature="1059:2076" ph="{...}" />
             <marker date="1551787105437" expanded="true" signature="1899:1997" ph="/* if (shakeTimer &gt; shakeDur * shakeDurMul - 0.3f) ... */" />
             <marker date="1551787105437" expanded="true" signature="2105:2320" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/HornyScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <marker date="1551783733401" expanded="false" signature="6:78" ph="..." />
+            <marker date="1551783733401" expanded="true" signature="121:661" ph="{...}" />
+            <marker date="1551783733401" expanded="true" signature="164:221" ph="{...}" />
+            <marker date="1551783733401" expanded="true" signature="270:659" ph="{...}" />
+            <marker date="1551783733401" expanded="true" signature="335:653" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Scripts/PlayerNameInputField.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+          <folding>
+            <marker date="1550071206000" expanded="true" signature="0:575" ph="/*  Let the player input his name to be saved as the network player Name, viewed by alls players above each  whe ... */" />
+            <marker date="1550071206000" expanded="false" signature="583:617" ph="..." />
+            <marker date="1550071206000" expanded="true" signature="654:2069" ph="{...}" />
+            <marker date="1550071206000" expanded="true" signature="658:788" ph="/// Player name input field. Let the user input his name, will appear above the player in the game. ... " />
+            <marker date="1550071206000" expanded="true" signature="879:2067" ph="{...}" />
+            <marker date="1550071206000" expanded="true" signature="885:1019" ph="Private Constants" />
+            <marker date="1550071206000" expanded="true" signature="1023:1550" ph="MonoBehaviour CallBacks" />
+            <marker date="1550071206000" expanded="true" signature="1060:1176" ph="/// MonoBehaviour method called on GameObject by Unity during initialization phase. ... " />
+            <marker date="1550071206000" expanded="true" signature="1193:1536" ph="{...}" />
+            <marker date="1550071206000" expanded="true" signature="1323:1490" ph="{...}" />
+            <marker date="1550071206000" expanded="true" signature="1375:1485" ph="{...}" />
+            <marker date="1550071206000" expanded="true" signature="1556:2064" ph="Public Methods" />
+            <marker date="1550071206000" expanded="true" signature="1582:1756" ph="/// Sets the name of the player, and save it in the PlayerPrefs for future sessions. ... " />
+            <marker date="1550071206000" expanded="true" signature="1798:2048" ph="{...}" />
+            <marker date="1550071206000" expanded="true" signature="1858:1956" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/UIMainMenu.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="80" column="43" selection-start-line="80" selection-start-column="43" selection-end-line="80" selection-end-column="43" />
+          <folding>
+            <marker date="1551797431658" expanded="false" signature="6:113" ph="..." />
+            <marker date="1551797431658" expanded="true" signature="155:2155" ph="{...}" />
+            <marker date="1551797431658" expanded="true" signature="552:746" ph="/* void Start() ... */" />
+            <marker date="1551797431658" expanded="true" signature="773:896" ph="{...}" />
+            <marker date="1551797431658" expanded="true" signature="924:1376" ph="{...}" />
+            <marker date="1551797431658" expanded="true" signature="1062:1370" ph="/* SceneManager.LoadScene(&quot;Basic Game&quot;); ... */" />
+            <marker date="1551797431658" expanded="true" signature="1408:1516" ph="{...}" />
+            <marker date="1551797431658" expanded="true" signature="1546:1652" ph="{...}" />
+            <marker date="1551797431658" expanded="true" signature="1683:1723" ph="{...}" />
+            <marker date="1551797431658" expanded="true" signature="1750:1901" ph="{...}" />
+            <marker date="1551797431658" expanded="true" signature="1953:2106" ph="{...}" />
+            <marker date="1551797431658" expanded="true" signature="1968:2054" ph="/* foreach (GameObject btn in mainMenuButtons) ... */" />
+            <marker date="1551797431658" expanded="true" signature="2140:2153" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/NetworkLauncher.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="89" column="98" selection-start-line="89" selection-start-column="98" selection-end-line="89" selection-end-column="98" />
+          <folding>
+            <marker date="1551797985872" expanded="true" signature="6:119" ph="..." />
+            <marker date="1551797985872" expanded="true" signature="177:3511" ph="{...}" />
+            <marker date="1551797985872" expanded="true" signature="184:236" ph="Private Serializable Fields" />
+            <marker date="1551797985872" expanded="true" signature="242:870" ph="Private Fields" />
+            <marker date="1551797985872" expanded="true" signature="271:437" ph="/// This client's version number. Users are separated from each other by gameVersion (which allows you to make br ... " />
+            <marker date="1551797985872" expanded="true" signature="477:646" ph="/// The maximum number of players per room. When a room is full, it can't be joined by new players, and so new ro ... " />
+            <marker date="1551797985872" expanded="true" signature="877:1309" ph="MonoBehaviour CallBacks" />
+            <marker date="1551797985872" expanded="true" signature="915:1041" ph="/// MonoBehaviour method called on GameObject by Unity during early initialization phase. ... " />
+            <marker date="1551797985872" expanded="true" signature="1058:1293" ph="{...}" />
+            <marker date="1551797985872" expanded="true" signature="1073:1234" ph="/* ##Critical ... */" />
+            <marker date="1551797985872" expanded="true" signature="1316:2224" ph="Public Methods" />
+            <marker date="1551797985872" expanded="true" signature="1345:1570" ph="/// Start the connection process. ... " />
+            <marker date="1551797985872" expanded="true" signature="1596:2207" ph="{...}" />
+            <marker date="1551797985872" expanded="true" signature="1756:1979" ph="{...}" />
+            <marker date="1551797985872" expanded="true" signature="1992:2201" ph="{...}" />
+            <marker date="1551797985872" expanded="true" signature="2234:3509" ph="MonoBehaviourPunCallbacks Callbacks" />
+            <marker date="1551797985872" expanded="true" signature="2326:2595" ph="{...}" />
+            <marker date="1551797985872" expanded="true" signature="2660:2867" ph="{...}" />
+            <marker date="1551797985872" expanded="true" signature="2950:3357" ph="{...}" />
+            <marker date="1551797985872" expanded="true" signature="3398:3492" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MultiplayerManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="21" selection-end-column="5" />
+          <folding>
+            <marker date="1551799802549" expanded="true" signature="6:136" ph="..." />
+            <marker date="1551799802549" expanded="true" signature="185:359" ph="{...}" />
+            <marker date="1551799802549" expanded="true" signature="257:278" ph="{...}" />
+            <marker date="1551799802549" expanded="true" signature="336:357" ph="{...}" />
           </folding>
         </state>
       </provider>

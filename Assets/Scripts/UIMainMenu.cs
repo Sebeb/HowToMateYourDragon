@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class UIMainMenu : MonoBehaviour {
-    public GameObject[] mainMenuButtons;
+    public GameObject mainMenuButton;
     public GameObject creditsImg;
     public GameObject howToPlayImg;
     public GameObject backButton;
@@ -76,8 +76,9 @@ public class UIMainMenu : MonoBehaviour {
 
     private void switchMenu(bool toMainMenu=false)
     {
-        foreach (GameObject btn in mainMenuButtons)
-            btn.SetActive(toMainMenu);
+        //foreach (GameObject btn in mainMenuButtons)
+        //    btn.SetActive(toMainMenu);
+        mainMenuButton.SetActive(toMainMenu);
     }
 
     private void StartSequence()
