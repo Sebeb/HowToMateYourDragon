@@ -74,7 +74,7 @@ public class Attack : MonoBehaviour {
         //}
     }
 
-    public void GetHit(int incDamage)
+    public void GetHit(int incDamage, string attacker)
     {
         print(gameObject.name + " got hit and took " + incDamage + " damage!");
         anim.Play("Dragon_Armature|Head_Get_Hit");
@@ -91,16 +91,21 @@ public class Attack : MonoBehaviour {
         else
             Game.controller.target = dragon;
         if (dragon.currentHealth <= 0)
-            Die();
+            Die(attacker);
     }
 
-    void Die()
+    void Die(string attacker)
     {
         if (dragon.isPlayer)
+        {
             Game.controller.Lose();
-        else
+            print("Leaving the room because the player died");
+            MultiplayerManager.inst.LeaveRoom();
+        }
+        else if (attacker == transform.name)
             Game.player.AbsorbAttributes(dragon);
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        
     }
 
     /*IEnumerator Recover()

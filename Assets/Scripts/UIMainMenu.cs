@@ -29,9 +29,10 @@ public class UIMainMenu : MonoBehaviour {
     {
 
         switchMenu();
-        anim.SetBool("shouldStart", true);
+        Game.anim.SetBool("shouldStart", true);
         
-        StartCoroutine(Sequence());
+        // now handled by the Network Manager and Photon
+        //StartCoroutine(Sequence());
     }
 
     IEnumerator Sequence()

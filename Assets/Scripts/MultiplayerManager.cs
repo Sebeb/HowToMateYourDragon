@@ -9,6 +9,21 @@ using Photon.Realtime;
 
 public class MultiplayerManager : MonoBehaviourPunCallbacks
 {
+    #region Public Fields
+
+    public static MultiplayerManager inst;
+
+    #endregion
+
+    #region MonoBehaviour Callbacks
+
+    private void Awake()
+    {
+        inst = this;
+    }
+
+    #endregion
+    
     #region Photon Callbacks
 
 
@@ -17,6 +32,7 @@ public class MultiplayerManager : MonoBehaviourPunCallbacks
     /// </summary>
     public override void OnLeftRoom()
     {
+        print("Loading Scene 0");
         SceneManager.LoadScene(0);
     }
 
@@ -29,7 +45,44 @@ public class MultiplayerManager : MonoBehaviourPunCallbacks
 
     public void LeaveRoom()
     {
+        print("Trying to leave room");
+        FireballScript[] fireballsOfPlayer = Game.FireballParent.GetComponentsInChildren<FireballScript>();
+        if (fireballsOfPlayer != null)
+        {
+            foreach (FireballScript fireballScript in fireballsOfPlayer)
+            {
+                if (fireballScript.owner == Game.player.gameObject)
+                    Destroy(fireballScript.gameObject);
+            }
+        }
         PhotonNetwork.LeaveRoom();
+    }
+
+    #endregion
+    
+    #region Photon Callbacks
+
+
+    public override void OnPlayerEnteredRoom(Player other)
+    {
+        Debug.LogFormat("Player {0} entered the room", other.NickName); // not seen if you're the player connecting
+
+
+        /*if (PhotonNetwork.IsMasterClient)
+        {
+            Debug.LogFormat("OnPlayerEnteredRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient); // called before OnPlayerLeftRoom
+        }*/
+    }
+
+
+    public override void OnPlayerLeftRoom(Player other)
+    {
+        Debug.LogFormat("Player {0} left the room", other.NickName); // seen when other disconnects
+
+        /*if (PhotonNetwork.IsMasterClient)
+        {
+            Debug.LogFormat("OnPlayerLeftRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient); // called before OnPlayerLeftRoom
+        }*/
     }
 
 

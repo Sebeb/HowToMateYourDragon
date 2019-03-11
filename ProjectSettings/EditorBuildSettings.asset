@@ -8,21 +8,16 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/IntroClip.unity
     guid: 79aaca33882baa64e8b58b2b3493aa40
-  - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/5fe20dc995748fd4fb999252aba128bb
-    guid: 5fe20dc995748fd4fb999252aba128bb
-  - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/a71424fc2f879f74dbc537eb4d851695
-    guid: a71424fc2f879f74dbc537eb4d851695
-  - enabled: 0
-    path: Assets/Scenes/Win.unity
-    guid: a1eb9f4e492254550b616570e8f8726a
-  - enabled: 0
-    path: Assets/Scenes/Loose.unity
-    guid: b1c76b960274d46068ecec185ed94a78
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: d05c8a1c3ec1e1e41abdd1b505c5c6d6
   - enabled: 1
     path: Assets/Scenes/Basic Game.unity
     guid: 4fd50230c9ebef843945a77d167b626d
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: a1eb9f4e492254550b616570e8f8726a
+  - enabled: 1
+    path: Assets/Scenes/Loose.unity
+    guid: b1c76b960274d46068ecec185ed94a78
+  m_configObjects: {}

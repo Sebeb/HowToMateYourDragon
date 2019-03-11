@@ -53,8 +53,11 @@ static public class MoveObjectToNewScene
         newScene = SceneManager.GetSceneByName(targetSceneName);
 
         // move the gameobjects from scene A to scene B
-        foreach (GameObject go in targetObjects)
-            SceneManager.MoveGameObjectToScene(go, newScene);
+        if (targetObjects != null)
+        {
+            foreach (GameObject go in targetObjects)
+                SceneManager.MoveGameObjectToScene(go, newScene);
+        }
 
         // unload scene A
         SceneManager.UnloadSceneAsync(currentScene);

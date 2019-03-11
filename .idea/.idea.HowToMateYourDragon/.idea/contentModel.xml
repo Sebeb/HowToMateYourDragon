@@ -24,6 +24,9 @@
             </e>
           </e>
         </e>
+        <e p="GameData" t="Include">
+          <e p="PlayerData.txt" t="Include" />
+        </e>
         <e p="HealthHUD.cs" t="Include" />
         <e p="MenuDragonController.cs" t="Include" />
         <e p="Photon" t="Include">
@@ -356,6 +359,7 @@
           <e p="CameraFollow.cs" t="Include" />
           <e p="CameraShaker.cs" t="Include" />
           <e p="DragonAI.cs" t="Include" />
+          <e p="DragonAnimationBehaviour.cs" t="Include" />
           <e p="DragonMain.cs" t="Include" />
           <e p="DragonMovement.cs" t="Include" />
           <e p="FireballScript.cs" t="Include" />

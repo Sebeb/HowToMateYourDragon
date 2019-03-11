@@ -1,0 +1,1 @@
+{"maxHealth":0,"isPlayer":true,"randomise":true,"currentHorns":1,"currentWings":2,"currentTail":0,"currentColour":3,"storedColour":0,"colourCount":0}

@@ -1,0 +1,8 @@
+All the features which would be nice if implemented
+
+Networking:
+
+
+Sound&Music&Video
+-Add Dragon Sounds
+-Add Win/Lose Video with music

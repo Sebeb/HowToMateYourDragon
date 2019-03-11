@@ -1,73 +1,72 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
-public class DragonMain : MonoBehaviour {
+[Serializable] public class DragonMain : MonoBehaviourPunCallbacks {
 
     [Header("Stats")]
     [HideInInspector]
 
     public int maxHealth;
-    public int currentHealth = 100;
-    public int damage = 40;
-    public float boostEnergy = 100;
-    public float relativeBoostSpeed = 1;
-    public float relativeSpeed = 1;
-    public float dexterity = 1;
-    public float baseHornDamage = 1;
+    [NonSerialized]public int currentHealth = 100;
+    [NonSerialized]public int damage = 40;
+    [NonSerialized]public float boostEnergy = 100;
+    [NonSerialized]public float relativeBoostSpeed = 1;
+    [NonSerialized]public float relativeSpeed = 1;
+    [NonSerialized]public float dexterity = 1;
+    [NonSerialized]public float baseHornDamage = 1;
 
     public bool isPlayer;
 
     public bool randomise;
 
     public Game.Elements currentHorns;
-    public Game.Elements storedHorns;
-    public int hornsCount;
+    [NonSerialized]public Game.Elements storedHorns;
+    [NonSerialized]public int hornsCount;
     public Game.Elements currentWings;
-    public Game.Elements storedWings;
-    public int wingsCount;
+    [NonSerialized]public Game.Elements storedWings;
+    [NonSerialized]public int wingsCount;
     public Game.Elements currentTail;
-    public Game.Elements storedTail;
-    public int tailCount;
+    [NonSerialized]public Game.Elements storedTail;
+    [NonSerialized]public int tailCount;
 
-    public SkinnedMeshRenderer bodyMesh;
-    public SkinnedMeshRenderer hornsMesh;
-    public SkinnedMeshRenderer wingsMesh;
-    public SkinnedMeshRenderer tailMesh;
+    [NonSerialized]public SkinnedMeshRenderer bodyMesh;
+    [NonSerialized]public SkinnedMeshRenderer hornsMesh;
+    [NonSerialized]public SkinnedMeshRenderer wingsMesh;
+    [NonSerialized]public SkinnedMeshRenderer tailMesh;
 
-    public Game.Colour currentColour, storedColour;
-    public int colourCount;
-    public Texture[] blueTextures;
-    public Texture[] greenTextures;
-    public Texture[] redTextures;
-    public Texture[] yellowTextures;
+    public Game.Colour currentColour;
+    [NonSerialized]public Game.Colour storedColour;
+    [NonSerialized]public int colourCount;
+    [NonSerialized]private Dictionary<string, Texture> allTextures;
 
-    Animator anim;
+    [NonSerialized]Animator anim;
 
-    public Texture[][] GetTextures() {
-        Texture[][] ret = new Texture[4][];
-        ret[0] = blueTextures;
-        ret[1] = greenTextures;
-        ret[2] = redTextures;
-        ret[3] = yellowTextures;
-        return ret;
+    private void LoadTextures()
+    {
+        allTextures = new Dictionary<string, Texture>();
+        foreach (Texture tex in Resources.LoadAll<Texture>("Dragon Textures"))
+        {
+            allTextures.Add(tex.name, tex);
+        }
     }
 
     void Start(){
         anim = GetComponent<Animator>();
         maxHealth = currentHealth;
-        GetAttributes();
-        
     }
 
     public void GetAttributes()
     {
         if (randomise)
         {
-            currentHorns = (Game.Elements)Random.Range(0, 3);
-            currentWings = (Game.Elements)Random.Range(0, 3);
-            currentTail = (Game.Elements)Random.Range(0, 3);
-            currentColour = (Game.Colour)Random.Range(0, 3);
+            currentHorns = (Game.Elements)Random.Range(0, 4);
+            currentWings = (Game.Elements)Random.Range(0, 4);
+            currentTail = (Game.Elements)Random.Range(0, 4);
+            currentColour = (Game.Colour)Random.Range(0, 4);
         }
         UpdateAttributes();
     }
@@ -144,9 +143,39 @@ public class DragonMain : MonoBehaviour {
         UpdateAttributes();
     }
 
-    void UpdateAttributes()
+    private void GetMeshRenderers()
     {
-        switch (currentHorns)
+        // get the mesh renderers, if not already known
+        if (bodyMesh == null)
+        {
+            foreach (SkinnedMeshRenderer meshRenderer in transform.GetComponentsInChildren<SkinnedMeshRenderer>())
+            {
+                switch (meshRenderer.gameObject.name)
+                {
+                    case ("Body"):
+                        bodyMesh = meshRenderer;
+                        break;
+                    case ("Horns"):
+                        hornsMesh = meshRenderer;
+                        break;
+                    case ("Tail"):
+                        tailMesh = meshRenderer;
+                        break;
+                    case ("Wings"):
+                        wingsMesh = meshRenderer;
+                        break;
+                }
+            }
+        }
+    }
+
+    public void UpdateAttributes()
+    {
+        GetMeshRenderers();
+        SetTexture(hornsMesh, currentHorns);
+        SetTexture(wingsMesh, currentWings);
+        SetTexture(tailMesh, currentTail);
+        /*switch (currentHorns)
         {
             case (Game.Elements.air):
                 SetTexture(hornsMesh, Game.Elements.air);
@@ -191,23 +220,19 @@ public class DragonMain : MonoBehaviour {
             case (Game.Elements.water):
                 SetTexture(tailMesh, Game.Elements.water);
                 break;
-        }
+        }*/
         SetTexture(bodyMesh, 0);
         if (GetComponent<TrailRenderer>() != null && Game.controller != null)
             GetComponent<TrailRenderer>().startColor = Game.controller.dragonColours[(int)currentColour];
     }
 
     void SetTexture(SkinnedMeshRenderer mesh, Game.Elements element){
-
-        if (currentColour == Game.Colour.blue)
-            mesh.material.SetTexture("_MainTex",blueTextures[(int)element]);
-        if (currentColour == Game.Colour.green)
-            mesh.material.SetTexture("_MainTex", greenTextures[(int)element]);
-        if (currentColour == Game.Colour.red)
-            mesh.material.SetTexture("_MainTex", redTextures[(int)element]);
-        if (currentColour == Game.Colour.yellow)
-            mesh.material.SetTexture("_MainTex", yellowTextures[(int)element]);
-
+        if (allTextures == null)
+        {
+            LoadTextures();
+        }
+        print(allTextures.Keys);
+        mesh.material.SetTexture("_MainTex",allTextures["Dragon " + element + " " + currentColour]);
     }
 }
 

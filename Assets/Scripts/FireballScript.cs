@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 public class FireballScript : MonoBehaviour {
@@ -9,13 +10,15 @@ public class FireballScript : MonoBehaviour {
     public bool shouldGrow = true;
     // Public string owner;
     public GameObject owner;
+    private DragonMain ownerScript;
     public float growingTimer;
     public float maxGrowingTime = 1.5f;
 
 	// Use this for initialization
-	void Start () {
-        
-	}
+	void Start ()
+    {
+        ownerScript = owner.GetComponent<DragonMain>();
+    }
 	
     IEnumerator Lifetime(){
         yield return new WaitForSeconds(lifespan);
@@ -23,12 +26,34 @@ public class FireballScript : MonoBehaviour {
         Destroy(gameObject);
     }
 
-	void FixedUpdate () {
+    private bool IsFireballManager()
+    {
+        if (owner.name.Contains("NPC")) {
+            if (!PhotonNetwork.IsMasterClient && PhotonNetwork.IsConnected)
+            {
+                return false;
+            }
+        }
+        else
+        {
+            if (!ownerScript.photonView.IsMine && PhotonNetwork.IsConnected)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+	void FixedUpdate ()
+    {
+        if (!IsFireballManager()) return;
+
         if (!shouldGrow)
         {
             transform.localPosition += Vector3.right * speed * Time.deltaTime;
             StartCoroutine(Lifetime());
-            transform.parent.parent = null;
+            transform.parent.parent = Game.FireballParent.transform;
         }
         else
         {
@@ -56,13 +81,15 @@ public class FireballScript : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (!IsFireballManager()) return;
+        
         if (shouldGrow)
             return;
         if (other.gameObject.name == owner.name)
             return;
         if (other.gameObject.GetComponent<Attack>() != null)
         {
-            other.gameObject.GetComponent<Attack>().GetHit((int)damage);
+            other.gameObject.GetComponent<Attack>().GetHit((int)damage, owner.name);
             Destroy(gameObject);
         }
         if (other.gameObject.GetComponent<FireballScript>() != null)

@@ -18,7 +18,7 @@ public class HornyScript : MonoBehaviour {
             print("headbutt!");
             DragonMain otherDragon = other.gameObject.GetComponent<DragonMain>();
             if ((dragon.isPlayer && !otherDragon.isPlayer) || (!dragon.isPlayer && otherDragon.isPlayer))
-                otherDragon.GetComponent<Attack>().GetHit((int)dragon.baseHornDamage);
+                otherDragon.GetComponent<Attack>().GetHit((int)dragon.baseHornDamage, transform.name);
         }
     }
 }
