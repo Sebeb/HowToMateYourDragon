@@ -1782,8 +1782,7 @@ MonoBehaviour:
   gameStartTime: 0
   secondsRemaining: 0
   gameLengthSeconds: 200
-  playerPrefab: {fileID: 1146199950939862, guid: dff5e30a3236e45e991d99d1350b58c8,
-    type: 3}
+  playerPrefab: {fileID: 98, guid: dff5e30a3236e45e991d99d1350b58c8, type: 3}
   dragonColours:
   - {r: 0.2429064, g: 0.08855967, b: 0.8602941, a: 1}
   - {r: 0.054119825, g: 0.6691177, b: 0.36373958, a: 1}
