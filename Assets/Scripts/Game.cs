@@ -263,14 +263,17 @@ public class Game : MonoBehaviour
         secondsRemaining = Mathf.Clamp(gameLengthSeconds - ((int)Time.unscaledTime) - gameStartTime,0,gameLengthSeconds);
         //if (secondsRemaining == 0)
         //    EndGame();
-        
-        /*if (MoveObjectToNewScene.shouldLoadNewScene) {
-            if (MoveObjectToNewScene.targetSceneName.Equals("Basic Game"))
-            {
-                InitialiseGame();
-            }
-        }*/
+        if (isIdealDrake())
+        {
+            Win();
+        }
+    }
 
+    bool isIdealDrake()
+    {
+        return player.currentTail == idealTail && player.currentHorns == idealHorns
+                                               && player.currentWings == idealWings &&
+                                               player.currentColour == idealColour;
     }
 
     public Vector3 ScreenToZ(Vector3 screenPoint)
@@ -280,14 +283,4 @@ public class Game : MonoBehaviour
         zPlane.Raycast(ray, out distance);
         return ray.GetPoint(distance);
     }
-    
-    /*static void CreatePrefab(GameObject go)
-    {
-        //Set the path as within the Assets folder, and name it as the GameObject's name with the .prefab format
-        string prefPath = "Assets/Resources/" + prefabName + ".prefab";
-        
-        //Create a new Prefab at the path given
-        Object prefab = PrefabUtility.SaveAsPrefabAsset(go, prefPath);
-        //PrefabUtility.SaveAsPrefabAssetAndConnect(go, prefPath, InteractionMode.UserAction);
-    }*/
 }

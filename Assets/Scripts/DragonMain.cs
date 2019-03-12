@@ -20,7 +20,6 @@ using Random = UnityEngine.Random;
     [NonSerialized]public float baseHornDamage = 1;
     // todo: set these 2 variables in this script instead of in the editor (eg by naming the GO)
     public bool isPlayer;
-    public bool randomise;
 
     public Game.Elements currentHorns;
     [NonSerialized]public Game.Elements storedHorns;
@@ -59,13 +58,11 @@ using Random = UnityEngine.Random;
 
     public void GetAttributes()
     {
-        if (randomise)
-        {
-            currentHorns = (Game.Elements)Random.Range(0, 4);
-            currentWings = (Game.Elements)Random.Range(0, 4);
-            currentTail = (Game.Elements)Random.Range(0, 4);
-            currentColour = (Game.Colour)Random.Range(0, 4);
-        }
+        
+        currentHorns = (Game.Elements)Random.Range(0, 4);
+        currentWings = (Game.Elements)Random.Range(0, 4);
+        currentTail = (Game.Elements)Random.Range(0, 4);
+        currentColour = (Game.Colour)Random.Range(0, 4);
         UpdateAttributes();
     }
 

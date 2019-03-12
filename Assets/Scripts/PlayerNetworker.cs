@@ -32,8 +32,11 @@ public class PlayerNetworker : MonoBehaviourPunCallbacks, IPunObservable
             // TODO: save some traffic data here (no need to send the whole DragonMain Script, how about sending a json)
             //player.currentHealth = (int)stream.ReceiveNext();
             string playerData = (string) stream.ReceiveNext();
-            JsonUtility.FromJsonOverwrite(playerData, player);
-            player.UpdateAttributes();
+            if (playerData != null && player != null)
+            {
+                JsonUtility.FromJsonOverwrite(playerData, player);
+                player.UpdateAttributes();
+            }
         }
         health = player.currentHealth;
     }
