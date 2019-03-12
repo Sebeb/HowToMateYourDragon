@@ -692,6 +692,7 @@ MonoBehaviour:
   - {fileID: 4713653212000036772}
   - {fileID: 221}
   - {fileID: 3356127602814726874}
+  - {fileID: 7929465915365554107}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -780,7 +781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7db341af375922429a79805394a7675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  health: -1
 --- !u!1 &99
 GameObject:
   m_ObjectHideFlags: 0
