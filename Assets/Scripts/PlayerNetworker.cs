@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
 
-public class PlayerManager : MonoBehaviourPunCallbacks, IPunObservable
+public class PlayerNetworker : MonoBehaviourPunCallbacks, IPunObservable
 {
-    public DragonMain player;
+    private DragonMain player;
+    public int health = -1;
     
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,7 @@ public class PlayerManager : MonoBehaviourPunCallbacks, IPunObservable
         else
         {
             player.currentHealth = (int)stream.ReceiveNext();
+            health = player.currentHealth;
         }
     }
 }

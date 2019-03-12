@@ -368,7 +368,7 @@
           <e p="MoveObjectToNewScene.cs" t="Include" />
           <e p="MultiplayerManager.cs" t="Include" />
           <e p="NetworkLauncher.cs" t="Include" />
-          <e p="PlayerManager.cs" t="Include" />
+          <e p="PlayerNetworker.cs" t="Include" />
           <e p="UIMainMenu.cs" t="Include" />
         </e>
         <e p="UIEmoji.cs" t="Include" />
