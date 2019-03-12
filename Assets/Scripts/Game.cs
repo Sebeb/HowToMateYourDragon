@@ -86,51 +86,6 @@ public class Game : MonoBehaviour
             player.UpdateAttributes();
         }
         
-        /*if (playerData != null)
-        {
-            playerData = JsonUtility.ToJson(player);
-            StreamWriter writer = new StreamWriter(playaDataPath, false);
-            writer.WriteLine(playerData);
-            writer.Close();
-            
-            print(playerData);
-            Destroy(player.gameObject);
-        }*/
-
-        /*if (player != null)
-        {
-            // todo: maybe whe have to Destroy the fireballs here
-            CreatePrefab(player.gameObject);
-            Destroy(player.gameObject);
-        }
-        
-        // TODO: Optimize that the playerPrefab wont be loaded from resources when going from game to menu 
-        // check if the player has a dragon already saved as an prefab then take it, else create a new one
-        GameObject playerToLoad = Resources.Load<GameObject>(prefabName);
-        bool shouldRandomize = false;
-        if (playerToLoad == null)
-        {
-            playerToLoad = PlayerPref;
-            shouldRandomize = true;
-        }
-        print(playerToLoad);
-        
-        // make sure the player gets Instantiated by MonoBehaviour when of a room or else by Photon.Instantiate
-        if (PhotonNetwork.InRoom)
-        {
-            player = PhotonNetwork.Instantiate(playerToLoad.name, Vector2.zero, Quaternion.identity)
-                .GetComponent<DragonMain>();
-        }
-        else
-        {
-            player = Instantiate(playerToLoad, Vector2.zero, Quaternion.identity).GetComponent<DragonMain>();
-        }
-
-        if (shouldRandomize)
-        {
-            player.GetAttributes();
-        }*/
-
         rb = player.gameObject.GetComponent<Rigidbody2D>();
         anim = player.gameObject.GetComponent<Animator>();
         
@@ -190,7 +145,7 @@ public class Game : MonoBehaviour
         player.GetComponent<DragonMovement>().enabled = active;
         //player.GetComponent<DragonMain>().enabled = active;
         player.GetComponent<CapsuleCollider2D>().enabled = active;
-        player.GetComponent<PhotonTransformViewClassic>().enabled = active;
+        player.GetComponent<PhotonTransformView>().enabled = active;
         player.GetComponent<PhotonAnimatorView>().enabled = active;
     }
 

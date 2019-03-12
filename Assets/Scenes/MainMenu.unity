@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45133084, g: 0.5009468, b: 0.5729872, a: 1}
+  m_IndirectSpecularColor: {r: 0.45133138, g: 0.5009473, b: 0.5729877, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1348,10 +1348,6 @@ MonoBehaviour:
   creditsImg: {fileID: 750912985}
   howToPlayImg: {fileID: 1234672814}
   backButton: {fileID: 1791013221}
-  objectsToMove:
-  - {fileID: 0}
-  - {fileID: 1065832783}
-  - {fileID: 0}
   anim: {fileID: 0}
 --- !u!4 &1041263021
 Transform:
@@ -1546,7 +1542,7 @@ MonoBehaviour:
   idealColour: 0
   hatesColour: 0
   spawnedDragons: []
-  dragonsPerLevel: 20
+  dragonsPerLevel: 1
   enemy: {fileID: 1151377324776180, guid: b02ee2c602abd42f4a93baddd0925811, type: 3}
   highscores: 
   enemies: {fileID: 0}

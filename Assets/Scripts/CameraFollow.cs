@@ -15,6 +15,7 @@ public class CameraFollow : MonoBehaviour {
 	// Update is called once per frame
 	void LateUpdate()
 	{
+		if (this == null || target == null) return;
 		transform.position = new Vector3(
 			Mathf.Clamp(target.transform.position.x, -Game.controller.worldSize.x + bounds.x,
 				Game.controller.worldSize.x - bounds.x),

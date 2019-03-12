@@ -15,7 +15,7 @@ using Random = UnityEngine.Random;
     [NonSerialized]public int damage = 40;
     [NonSerialized]public float boostEnergy = 100;
     [NonSerialized]public float relativeBoostSpeed = 1;
-    [NonSerialized]public float relativeSpeed = 1;
+    [NonSerialized]public float relativeSpeed = 1f;
     [NonSerialized]public float dexterity = 1;
     [NonSerialized]public float baseHornDamage = 1;
 

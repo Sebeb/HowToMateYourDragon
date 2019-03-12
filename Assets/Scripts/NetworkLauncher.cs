@@ -32,7 +32,7 @@ public class NetworkLauncher : MonoBehaviourPunCallbacks
     /// we need to keep track of this to properly adjust the behavior when we receive call back by Photon.
     /// Typically this is used for the OnConnectedToMaster() callback.
     /// </summary>
-    bool isConnecting;
+    public static bool isConnecting;
 
 
     #endregion
@@ -72,7 +72,7 @@ public class NetworkLauncher : MonoBehaviourPunCallbacks
         if (PhotonNetwork.IsConnected)
         {
             // #Critical we need at this point to attempt joining a Random Room. If it fails, we'll get notified in OnJoinRandomFailed() and we'll create one.
-            PhotonNetwork.JoinRandomRoom();
+            //PhotonNetwork.JoinRandomRoom();
         }
         else
         {
@@ -94,11 +94,11 @@ public class NetworkLauncher : MonoBehaviourPunCallbacks
         // we don't want to do anything if we are not attempting to join a room.
         // this case where isConnecting is false is typically when you lost or quit the game, when this level is loaded, OnConnectedToMaster will be called, in that case
         // we don't want to do anything.
-        if (isConnecting)
+        /*if (isConnecting)
         {
             // #Critical: The first we try to do is to join a potential existing room. If there is, good, else, we'll be called back with OnJoinRandomFailed()
             PhotonNetwork.JoinRandomRoom();
-        }
+        }*/
     }
 
 
@@ -121,14 +121,15 @@ public class NetworkLauncher : MonoBehaviourPunCallbacks
     {
         print("OnJoinedRoom()");
         print(PhotonNetwork.CurrentRoom.AutoCleanUp);
-        if (!Game.anim.GetCurrentAnimatorStateInfo(0).IsName("Runestone_Start"))
+        /*if (!Game.anim.GetCurrentAnimatorStateInfo(0).IsName("Runestone_Start"))
         {
             // animation hasn't been played completely. Load new scene when the animation is over
             LoadGame();
-        }
+        }*/
+        PhotonNetwork.LoadLevel("Basic Game");
     }
 
-    public static void LoadGame()
+    /*public static void LoadGame()
     {
         print("Trying to load game");
         if (!PhotonNetwork.InRoom)
@@ -148,7 +149,7 @@ public class NetworkLauncher : MonoBehaviourPunCallbacks
             // Load the Room Level.
             PhotonNetwork.LoadLevel("Basic Game");
         //}
-    }
+    }*/
 
 
     #endregion

@@ -411,8 +411,8 @@ GameObject:
   - component: {fileID: 197}
   - component: {fileID: 222}
   - component: {fileID: 221}
-  - component: {fileID: 3356127602814726874}
-  - component: {fileID: 4713653212000036772}
+  - component: {fileID: 8199779811093847036}
+  - component: {fileID: 6031683605806219625}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -688,9 +688,9 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   ObservedComponents:
-  - {fileID: 4713653212000036772}
+  - {fileID: 6031683605806219625}
   - {fileID: 221}
-  - {fileID: 3356127602814726874}
+  - {fileID: 8199779811093847036}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -736,7 +736,7 @@ MonoBehaviour:
     LayerIndex: 2
   - SynchronizeType: 1
     LayerIndex: 3
---- !u!114 &3356127602814726874
+--- !u!114 &8199779811093847036
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -752,7 +752,7 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 0
   m_TeleportEnabled: 0
   m_TeleportIfDistanceGreaterThan: 3
---- !u!114 &4713653212000036772
+--- !u!114 &6031683605806219625
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

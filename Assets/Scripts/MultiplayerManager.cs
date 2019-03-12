@@ -20,6 +20,7 @@ public class MultiplayerManager : MonoBehaviourPunCallbacks
     private void Awake()
     {
         inst = this;
+        
     }
 
     #endregion
@@ -55,13 +56,9 @@ public class MultiplayerManager : MonoBehaviourPunCallbacks
                     Destroy(fireballScript.gameObject);
             }
         }
+        PhotonNetwork.Destroy(Game.player.gameObject);
         PhotonNetwork.LeaveRoom();
     }
-
-    #endregion
-    
-    #region Photon Callbacks
-
 
     public override void OnPlayerEnteredRoom(Player other)
     {

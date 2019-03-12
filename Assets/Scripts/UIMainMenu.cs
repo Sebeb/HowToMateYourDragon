@@ -8,7 +8,6 @@ public class UIMainMenu : MonoBehaviour {
     public GameObject creditsImg;
     public GameObject howToPlayImg;
     public GameObject backButton;
-    public GameObject[] objectsToMove;
 
     public static bool isPaused = true;
     private float sequenceDur = 6;
@@ -35,7 +34,7 @@ public class UIMainMenu : MonoBehaviour {
         //StartCoroutine(Sequence());
     }
 
-    IEnumerator Sequence()
+    /*IEnumerator Sequence()
     {
         yield return new WaitForSeconds(sequenceDur);
         MoveObjectToNewScene.LoadScene("Basic Game", objectsToMove);
@@ -45,8 +44,8 @@ public class UIMainMenu : MonoBehaviour {
         // Object.DontDestroyOnLoad(player.gameObject);
         foreach (GameObject go in objectsToMove)
             SceneManager.MoveGameObjectToScene(go, mainGameScene);
-            */
-    }
+            
+    }*/
 
     public void HowToPlayBtn()
     {
