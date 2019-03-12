@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3aa3b2b-545f-46e3-95c2-76349131de63" name="Default Changelist" comment="" />
+    <list default="true" id="b3aa3b2b-545f-46e3-95c2-76349131de63" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Basic Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Basic Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerNetworker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerNetworker.cs" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,16 +105,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerNetworker.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+            <state relative-caret-position="259">
+              <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
               <folding>
-                <marker date="1552387377374" expanded="false" signature="6:96" ph="..." />
-                <marker date="1552387377374" expanded="true" signature="170:789" ph="{...}" />
-                <marker date="1552387377374" expanded="true" signature="306:373" ph="{...}" />
-                <marker date="1552387377374" expanded="true" signature="431:452" ph="{...}" />
-                <marker date="1552387377374" expanded="true" signature="536:787" ph="{...}" />
-                <marker date="1552387377374" expanded="true" signature="572:643" ph="{...}" />
-                <marker date="1552387377374" expanded="true" signature="656:781" ph="{...}" />
+                <marker date="1552401303273" expanded="false" signature="6:96" ph="..." />
+                <marker date="1552401303273" expanded="true" signature="170:1406" ph="{...}" />
+                <marker date="1552401303273" expanded="true" signature="306:373" ph="{...}" />
+                <marker date="1552401303273" expanded="true" signature="431:452" ph="{...}" />
+                <marker date="1552401303273" expanded="true" signature="536:1404" ph="{...}" />
+                <marker date="1552401303273" expanded="true" signature="630:740" ph="{...}" />
+                <marker date="1552401303273" expanded="true" signature="753:1359" ph="{...}" />
+                <marker date="1552401303273" expanded="true" signature="776:948" ph="/* player.currentHealth = (int)stream.ReceiveNext(); ... */" />
               </folding>
             </state>
           </provider>
@@ -290,7 +294,7 @@
       <facet id="riderModule/invalid/Default Android Facet" />
     </ignored-facets>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1386" />
@@ -386,12 +390,12 @@
       <workItem from="1552294218323" duration="2120000" />
       <workItem from="1552318786422" duration="1799000" />
       <workItem from="1552384140870" duration="706000" />
-      <workItem from="1552385517587" duration="1772000" />
+      <workItem from="1552385517587" duration="3366000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73514000" />
+    <option name="totallyTimeSpent" value="75108000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -403,7 +407,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1435" height="772" extended-state="7" />
+    <frame x="-6" y="-6" width="1435" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25308195" />
@@ -1325,16 +1329,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerNetworker.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        <state relative-caret-position="259">
+          <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
           <folding>
-            <marker date="1552387377374" expanded="false" signature="6:96" ph="..." />
-            <marker date="1552387377374" expanded="true" signature="170:789" ph="{...}" />
-            <marker date="1552387377374" expanded="true" signature="306:373" ph="{...}" />
-            <marker date="1552387377374" expanded="true" signature="431:452" ph="{...}" />
-            <marker date="1552387377374" expanded="true" signature="536:787" ph="{...}" />
-            <marker date="1552387377374" expanded="true" signature="572:643" ph="{...}" />
-            <marker date="1552387377374" expanded="true" signature="656:781" ph="{...}" />
+            <marker date="1552401303273" expanded="false" signature="6:96" ph="..." />
+            <marker date="1552401303273" expanded="true" signature="170:1406" ph="{...}" />
+            <marker date="1552401303273" expanded="true" signature="306:373" ph="{...}" />
+            <marker date="1552401303273" expanded="true" signature="431:452" ph="{...}" />
+            <marker date="1552401303273" expanded="true" signature="536:1404" ph="{...}" />
+            <marker date="1552401303273" expanded="true" signature="630:740" ph="{...}" />
+            <marker date="1552401303273" expanded="true" signature="753:1359" ph="{...}" />
+            <marker date="1552401303273" expanded="true" signature="776:948" ph="/* player.currentHealth = (int)stream.ReceiveNext(); ... */" />
           </folding>
         </state>
       </provider>
