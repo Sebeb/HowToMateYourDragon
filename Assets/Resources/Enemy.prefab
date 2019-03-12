@@ -453,7 +453,6 @@ MonoBehaviour:
   upward: 0
   lift: 0
   gravity: -5
-  boosting: 0
   velocityMag: 0
   target: {x: 0, y: 0}
   targetAngle: 0
@@ -474,12 +473,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 0
+  currentHealth: 100
   isPlayer: 0
   currentHorns: 0
   currentWings: 0
   currentTail: 0
   currentColour: 0
+  boosting: 0
+  fireballInMouth: 0
 --- !u!70 &603
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

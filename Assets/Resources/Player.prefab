@@ -628,7 +628,6 @@ MonoBehaviour:
   upward: 0
   lift: 0
   gravity: -5
-  boosting: 0
   velocityMag: 0
   target: {x: 0, y: 0}
   targetAngle: 0
@@ -655,6 +654,8 @@ MonoBehaviour:
   currentWings: 0
   currentTail: 0
   currentColour: 0
+  boosting: 0
+  fireballInMouth: 0
 --- !u!70 &197
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

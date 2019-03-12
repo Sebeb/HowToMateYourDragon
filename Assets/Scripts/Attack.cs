@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 public class Attack : MonoBehaviour {
@@ -11,7 +12,6 @@ public class Attack : MonoBehaviour {
     public float fireballLifespan = 1.5f;
     DragonMain dragon;
     private bool fireballIsReleased = false;
-    private bool fireballInMouth = false;
     public Vector3 mouthPos;
     private Animator anim;
     GameObject currentFireball;
@@ -23,7 +23,7 @@ public class Attack : MonoBehaviour {
 
     public void Fire(bool fireImmediate=false)
     {
-        if (readyToFire && !fireballInMouth)
+        if (readyToFire && !dragon.fireballInMouth)
         {
             readyToFire = false;
             GameObject newFireball = new GameObject(transform.name + "_fireball");
@@ -45,7 +45,7 @@ public class Attack : MonoBehaviour {
             newFireballScript.owner = gameObject;
             newFireballScript.shouldGrow = true;
             newFireballScript.growingTimer = newFireballScript.maxGrowingTime;
-            fireballInMouth = true;
+            dragon.fireballInMouth = true;
             anim.Play("Dragon_Armature|Head_Prepare_Fireball");
             for (int i = 0; i < newFireball.transform.childCount; i++)
                 newFireball.transform.GetChild(i).transform.localScale = Vector3.one * 0.05f;
@@ -84,7 +84,7 @@ public class Attack : MonoBehaviour {
             Destroy(currentFireball.transform.parent.gameObject);
         //print(fireballInMouth);
         fireballIsReleased = false;
-        fireballInMouth = false;
+        dragon.fireballInMouth = false;
         dragon.currentHealth -= incDamage;
         if (dragon.isPlayer)
             CameraShaker.Shake(12);
@@ -119,7 +119,7 @@ public class Attack : MonoBehaviour {
         if (fireballIsReleased)
         {
             fireballIsReleased = false;
-            fireballInMouth = false;
+            dragon.fireballInMouth = false;
             anim.Play("Dragon_Armature|Head_Shoot_Fireball");
             return false;
         }

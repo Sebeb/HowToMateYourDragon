@@ -41,6 +41,7 @@ using Random = UnityEngine.Random;
     [NonSerialized]private Dictionary<string, Texture> allTextures;
     
     public bool boosting;
+    public bool fireballInMouth;
 
     [NonSerialized]Animator anim;
 
