@@ -77,11 +77,14 @@ public class Game : MonoBehaviour
         }
         else
         {
+            int maxHealth = player.maxHealth;
             StreamReader reader = new StreamReader(playerDataPath + playerDataName);
             playerData = reader.ReadToEnd();
             reader.Close();
             print("Applying jason data");
             JsonUtility.FromJsonOverwrite(playerData, player);
+            player.maxHealth = maxHealth;
+            player.currentHealth = maxHealth;
             player.UpdateAttributes();
         }
         

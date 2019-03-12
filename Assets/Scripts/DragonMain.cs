@@ -10,17 +10,16 @@ using Random = UnityEngine.Random;
     [Header("Stats")]
     [HideInInspector]
 
-    public int maxHealth;
-    [NonSerialized]public int currentHealth = 100;
+    public int maxHealth = 100;
+    public int currentHealth;
     [NonSerialized]public int damage = 40;
     [NonSerialized]public float boostEnergy = 100;
     [NonSerialized]public float relativeBoostSpeed = 1;
     [NonSerialized]public float relativeSpeed = 1f;
     [NonSerialized]public float dexterity = 1;
     [NonSerialized]public float baseHornDamage = 1;
-
+    // todo: set these 2 variables in this script instead of in the editor (eg by naming the GO)
     public bool isPlayer;
-
     public bool randomise;
 
     public Game.Elements currentHorns;
@@ -56,7 +55,6 @@ using Random = UnityEngine.Random;
 
     void Start(){
         anim = GetComponent<Animator>();
-        maxHealth = currentHealth;
     }
 
     public void GetAttributes()

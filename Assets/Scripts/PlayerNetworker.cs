@@ -22,22 +22,17 @@ public class PlayerNetworker : MonoBehaviourPunCallbacks, IPunObservable
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        print("Sending or receiving" + stream.IsWriting);
         if (stream.IsWriting)
         {
             //stream.SendNext(player.currentHealth);
-            stream.SendNext(player);
+            stream.SendNext(JsonUtility.ToJson(player));
         }
         else
         {
             // TODO: save some traffic data here (no need to send the whole DragonMain Script, how about sending a json)
             //player.currentHealth = (int)stream.ReceiveNext();
-            DragonMain newPlayer = (DragonMain) stream.ReceiveNext();
-            player.currentHealth = newPlayer.currentHealth;
-            player.currentTail = newPlayer.currentTail;
-            player.currentHorns = newPlayer.currentHorns;
-            player.currentWings = newPlayer.currentWings;
-            player.currentColour = newPlayer.currentColour;
+            string playerData = (string) stream.ReceiveNext();
+            JsonUtility.FromJsonOverwrite(playerData, player);
             player.UpdateAttributes();
         }
         health = player.currentHealth;
