@@ -8,7 +8,6 @@ using Random = UnityEngine.Random;
 [Serializable] public class DragonMain : MonoBehaviourPunCallbacks {
 
     [Header("Stats")]
-    [HideInInspector]
 
     public int maxHealth = 100;
     public int currentHealth;

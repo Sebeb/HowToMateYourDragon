@@ -38,6 +38,10 @@ public class PlayerNetworker : MonoBehaviourPunCallbacks, IPunObservable
                 player.UpdateAttributes();
             }
         }
-        health = player.currentHealth;
+
+        if (player != null)
+        {
+            health = player.currentHealth;
+        }
     }
 }

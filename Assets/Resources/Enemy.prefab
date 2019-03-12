@@ -473,9 +473,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 419c3990dfc8fec4bae91eed7c49867b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 100
+  currentHealth: 0
   isPlayer: 0
-  randomise: 0
   currentHorns: 0
   currentWings: 0
   currentTail: 0
