@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3aa3b2b-545f-46e3-95c2-76349131de63" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/HealthHUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HealthHUD.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Basic Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Basic Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Attack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DragonMain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DragonMain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DragonMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DragonMovement.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -158,7 +153,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/HealthHUD.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -177,31 +172,31 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/DragonMovement.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="56" column="25" lean-forward="true" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
+            <state relative-caret-position="120">
+              <caret line="59" column="97" lean-forward="true" selection-start-line="59" selection-start-column="97" selection-end-line="59" selection-end-column="97" />
               <folding>
-                <marker date="1552409185498" expanded="false" signature="6:96" ph="..." />
-                <marker date="1552409185498" expanded="true" signature="145:6116" ph="{...}" />
-                <marker date="1552409185498" expanded="true" signature="660:809" ph="{...}" />
-                <marker date="1552409185498" expanded="true" signature="847:1494" ph="{...}" />
-                <marker date="1552409185498" expanded="true" signature="893:1353" ph="{...}" />
-                <marker date="1552409185498" expanded="true" signature="1169:1343" ph="{...}" />
-                <marker date="1552409185498" expanded="true" signature="1395:1488" ph="{...}" />
-                <marker date="1552409185498" expanded="true" signature="1533:1660" ph="{...}" />
-                <marker date="1552409185498" expanded="true" signature="1683:5521" ph="{...}" />
-                <marker date="1552409185498" expanded="true" signature="1693:1780" ph="/* if (UIMainMenu.isPaused &amp;&amp; GetComponent&lt;DragonMain&gt;().isPlayer) ... */" />
-                <marker date="1552409185498" expanded="true" signature="1929:2067" ph="{...}" />
-                <marker date="1552409185498" expanded="true" signature="2114:2530" ph="{...}" />
-                <marker date="1552409185498" expanded="true" signature="3031:3570" ph="{...}" />
-                <marker date="1552409185498" expanded="true" signature="4199:4638" ph="{...}" />
-                <marker date="1552409185498" expanded="true" signature="4233:4628" ph="{...}" />
-                <marker date="1552409185498" expanded="true" signature="4790:4976" ph="{...}" />
-                <marker date="1552409185498" expanded="true" signature="5585:5750" ph="{...}" />
-                <marker date="1552409185498" expanded="true" signature="5796:5881" ph="{...}" />
-                <marker date="1552409185498" expanded="true" signature="5953:6114" ph="{...}" />
+                <marker date="1552414384441" expanded="false" signature="6:96" ph="..." />
+                <marker date="1552414384441" expanded="true" signature="145:6114" ph="{...}" />
+                <marker date="1552414384441" expanded="true" signature="660:809" ph="{...}" />
+                <marker date="1552414384441" expanded="true" signature="847:1494" ph="{...}" />
+                <marker date="1552414384441" expanded="true" signature="893:1353" ph="{...}" />
+                <marker date="1552414384441" expanded="true" signature="1169:1343" ph="{...}" />
+                <marker date="1552414384441" expanded="true" signature="1395:1488" ph="{...}" />
+                <marker date="1552414384441" expanded="true" signature="1533:1660" ph="{...}" />
+                <marker date="1552414384441" expanded="true" signature="1683:5519" ph="{...}" />
+                <marker date="1552414384441" expanded="true" signature="1693:1780" ph="/* if (UIMainMenu.isPaused &amp;&amp; GetComponent&lt;DragonMain&gt;().isPlayer) ... */" />
+                <marker date="1552414384441" expanded="true" signature="1927:2065" ph="{...}" />
+                <marker date="1552414384441" expanded="true" signature="2112:2528" ph="{...}" />
+                <marker date="1552414384441" expanded="true" signature="3029:3568" ph="{...}" />
+                <marker date="1552414384441" expanded="true" signature="4197:4636" ph="{...}" />
+                <marker date="1552414384441" expanded="true" signature="4231:4626" ph="{...}" />
+                <marker date="1552414384441" expanded="true" signature="4788:4974" ph="{...}" />
+                <marker date="1552414384441" expanded="true" signature="5583:5748" ph="{...}" />
+                <marker date="1552414384441" expanded="true" signature="5794:5879" ph="{...}" />
+                <marker date="1552414384441" expanded="true" signature="5951:6112" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -366,10 +361,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraFollow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerNetworker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DragonMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DragonMain.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Attack.cs" />
         <option value="$PROJECT_DIR$/Assets/HealthHUD.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DragonMovement.cs" />
       </list>
     </option>
   </component>
@@ -474,12 +469,12 @@
       <workItem from="1552294218323" duration="2120000" />
       <workItem from="1552318786422" duration="1799000" />
       <workItem from="1552384140870" duration="706000" />
-      <workItem from="1552385517587" duration="9104000" />
+      <workItem from="1552385517587" duration="9362000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80846000" />
+    <option name="totallyTimeSpent" value="81104000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1330,34 +1325,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/DragonMovement.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="56" column="25" lean-forward="true" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
-          <folding>
-            <marker date="1552409185498" expanded="false" signature="6:96" ph="..." />
-            <marker date="1552409185498" expanded="true" signature="145:6116" ph="{...}" />
-            <marker date="1552409185498" expanded="true" signature="660:809" ph="{...}" />
-            <marker date="1552409185498" expanded="true" signature="847:1494" ph="{...}" />
-            <marker date="1552409185498" expanded="true" signature="893:1353" ph="{...}" />
-            <marker date="1552409185498" expanded="true" signature="1169:1343" ph="{...}" />
-            <marker date="1552409185498" expanded="true" signature="1395:1488" ph="{...}" />
-            <marker date="1552409185498" expanded="true" signature="1533:1660" ph="{...}" />
-            <marker date="1552409185498" expanded="true" signature="1683:5521" ph="{...}" />
-            <marker date="1552409185498" expanded="true" signature="1693:1780" ph="/* if (UIMainMenu.isPaused &amp;&amp; GetComponent&lt;DragonMain&gt;().isPlayer) ... */" />
-            <marker date="1552409185498" expanded="true" signature="1929:2067" ph="{...}" />
-            <marker date="1552409185498" expanded="true" signature="2114:2530" ph="{...}" />
-            <marker date="1552409185498" expanded="true" signature="3031:3570" ph="{...}" />
-            <marker date="1552409185498" expanded="true" signature="4199:4638" ph="{...}" />
-            <marker date="1552409185498" expanded="true" signature="4233:4628" ph="{...}" />
-            <marker date="1552409185498" expanded="true" signature="4790:4976" ph="{...}" />
-            <marker date="1552409185498" expanded="true" signature="5585:5750" ph="{...}" />
-            <marker date="1552409185498" expanded="true" signature="5796:5881" ph="{...}" />
-            <marker date="1552409185498" expanded="true" signature="5953:6114" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerNetworker.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1481,6 +1448,34 @@
             <marker date="1552413478680" expanded="true" signature="616:1271" ph="{...}" />
             <marker date="1552413478680" expanded="true" signature="765:1062" ph="{...}" />
             <marker date="1552413478680" expanded="true" signature="1069:1160" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/DragonMovement.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="59" column="97" lean-forward="true" selection-start-line="59" selection-start-column="97" selection-end-line="59" selection-end-column="97" />
+          <folding>
+            <marker date="1552414384441" expanded="false" signature="6:96" ph="..." />
+            <marker date="1552414384441" expanded="true" signature="145:6114" ph="{...}" />
+            <marker date="1552414384441" expanded="true" signature="660:809" ph="{...}" />
+            <marker date="1552414384441" expanded="true" signature="847:1494" ph="{...}" />
+            <marker date="1552414384441" expanded="true" signature="893:1353" ph="{...}" />
+            <marker date="1552414384441" expanded="true" signature="1169:1343" ph="{...}" />
+            <marker date="1552414384441" expanded="true" signature="1395:1488" ph="{...}" />
+            <marker date="1552414384441" expanded="true" signature="1533:1660" ph="{...}" />
+            <marker date="1552414384441" expanded="true" signature="1683:5519" ph="{...}" />
+            <marker date="1552414384441" expanded="true" signature="1693:1780" ph="/* if (UIMainMenu.isPaused &amp;&amp; GetComponent&lt;DragonMain&gt;().isPlayer) ... */" />
+            <marker date="1552414384441" expanded="true" signature="1927:2065" ph="{...}" />
+            <marker date="1552414384441" expanded="true" signature="2112:2528" ph="{...}" />
+            <marker date="1552414384441" expanded="true" signature="3029:3568" ph="{...}" />
+            <marker date="1552414384441" expanded="true" signature="4197:4636" ph="{...}" />
+            <marker date="1552414384441" expanded="true" signature="4231:4626" ph="{...}" />
+            <marker date="1552414384441" expanded="true" signature="4788:4974" ph="{...}" />
+            <marker date="1552414384441" expanded="true" signature="5583:5748" ph="{...}" />
+            <marker date="1552414384441" expanded="true" signature="5794:5879" ph="{...}" />
+            <marker date="1552414384441" expanded="true" signature="5951:6112" ph="{...}" />
           </folding>
         </state>
       </provider>
