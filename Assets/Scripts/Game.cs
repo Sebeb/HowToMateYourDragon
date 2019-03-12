@@ -85,6 +85,7 @@ public class Game : MonoBehaviour
             JsonUtility.FromJsonOverwrite(playerData, player);
             player.maxHealth = maxHealth;
             player.currentHealth = maxHealth;
+            player.boosting = false;
             player.UpdateAttributes();
         }
         

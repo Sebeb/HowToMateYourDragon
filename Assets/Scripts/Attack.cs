@@ -8,7 +8,7 @@ public class Attack : MonoBehaviour {
     public int fireballSpeed;
     public float fireballCd = 1;
     public bool readyToFire;
-    public float fireballLifespan = 2;
+    public float fireballLifespan = 1.5f;
     DragonMain dragon;
     private bool fireballIsReleased = false;
     private bool fireballInMouth = false;

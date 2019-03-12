@@ -17,7 +17,7 @@ using Random = UnityEngine.Random;
     [NonSerialized]public float relativeSpeed = 1f;
     [NonSerialized]public float dexterity = 1;
     [NonSerialized]public float baseHornDamage = 1;
-    // todo: set these 2 variables in this script instead of in the editor (eg by naming the GO)
+    // todo: set the variable in this script instead of in the editor (eg by naming the GO), then remove Enemy Prefab
     public bool isPlayer;
 
     public Game.Elements currentHorns;
@@ -39,6 +39,8 @@ using Random = UnityEngine.Random;
     [NonSerialized]public Game.Colour storedColour;
     [NonSerialized]public int colourCount;
     [NonSerialized]private Dictionary<string, Texture> allTextures;
+    
+    public bool boosting;
 
     [NonSerialized]Animator anim;
 

@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 public class DragonMovement : MonoBehaviour {
 
-    public float thrust,boost, boostSpeed, terminalVelocity, boostCost, boostCooldown, boostCharge, speed, decelleration, rotationSpeed, upward, lift, gravity = -9.81f;
-	public bool boosting;
+    public float thrust, boost, boostSpeed, terminalVelocity, boostCost, boostCooldown, boostCharge, speed,
+        decelleration, rotationSpeed, upward, lift, gravity = -9.81f;
 	public float velocityMag;
     Rigidbody2D rigidBody2D;
 	Vector2 velocity;
@@ -30,7 +31,7 @@ public class DragonMovement : MonoBehaviour {
     public void Boost(bool active){
         if (active && boost > boostCooldown)
         {
-            boosting = true;
+            dragon.boosting = true;
             anim.SetBool("Headbut",true);
             speed = boostSpeed * dragon.relativeBoostSpeed;
             boost = Mathf.Clamp(boost - (boostCost * Time.fixedDeltaTime), 0, dragon.boostEnergy);
@@ -38,18 +39,18 @@ public class DragonMovement : MonoBehaviour {
             if (boost == 0)
             {
                 boostCooldown = dragon.boostEnergy / 10;
-                boosting = false;
+                dragon.boosting = false;
                 anim.SetBool("Headbut", false);
             }
         }
-        else if (boosting == true){
-            boosting = false; 
+        else if (dragon.boosting == true){
+            dragon.boosting = false; 
             anim.SetBool("Headbut", false);
         }
     }
 
     public void Move(float direction){
-        if (!boosting)
+        if (!dragon.boosting)
             rigidBody2D.angularVelocity = (direction * rotationSpeed * dragon.dexterity);
     }
 
@@ -58,7 +59,7 @@ public class DragonMovement : MonoBehaviour {
         //    return;
         if (!Game.status.Equals("Basic Game"))
             return;
-        if (dragon.isPlayer)
+        if (dragon.isPlayer && (PhotonNetwork.IsMasterClient || !PhotonNetwork.IsConnected))
         {
             if (Input.GetButton("Boost"))
                 Boost(true);
@@ -66,7 +67,7 @@ public class DragonMovement : MonoBehaviour {
                 Boost(false);
         }
         //Boost!
-        if (!boosting)
+        if (!dragon.boosting)
         {
             speed = thrust*dragon.relativeSpeed;
             if (rigidBody2D.velocity.magnitude > thrust*dragon.relativeSpeed)
