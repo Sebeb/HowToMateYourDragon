@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
 
-public class DragonMovement : MonoBehaviour {
+public class DragonMovement : MonoBehaviourPun {
 
     public float thrust, boost, boostSpeed, terminalVelocity, boostCost, boostCooldown, boostCharge, speed,
         decelleration, rotationSpeed, upward, lift, gravity = -9.81f;
@@ -59,7 +59,7 @@ public class DragonMovement : MonoBehaviour {
         //    return;
         if (!Game.status.Equals("Basic Game"))
             return;
-        if (dragon.isPlayer && (PhotonNetwork.IsMasterClient || !PhotonNetwork.IsConnected))
+        if (dragon.isPlayer && (photonView.IsMine || !PhotonNetwork.IsConnected))
         {
             if (Input.GetButton("Boost"))
                 Boost(true);
