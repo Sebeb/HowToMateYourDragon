@@ -175,28 +175,29 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/DragonMovement.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="59" column="97" lean-forward="true" selection-start-line="59" selection-start-column="97" selection-end-line="59" selection-end-column="97" />
+            <state relative-caret-position="135">
+              <caret line="63" column="72" selection-start-line="63" selection-start-column="72" selection-end-line="63" selection-end-column="72" />
               <folding>
-                <marker date="1552414384441" expanded="false" signature="6:96" ph="..." />
-                <marker date="1552414384441" expanded="true" signature="145:6114" ph="{...}" />
-                <marker date="1552414384441" expanded="true" signature="660:809" ph="{...}" />
-                <marker date="1552414384441" expanded="true" signature="847:1494" ph="{...}" />
-                <marker date="1552414384441" expanded="true" signature="893:1353" ph="{...}" />
-                <marker date="1552414384441" expanded="true" signature="1169:1343" ph="{...}" />
-                <marker date="1552414384441" expanded="true" signature="1395:1488" ph="{...}" />
-                <marker date="1552414384441" expanded="true" signature="1533:1660" ph="{...}" />
-                <marker date="1552414384441" expanded="true" signature="1683:5519" ph="{...}" />
-                <marker date="1552414384441" expanded="true" signature="1693:1780" ph="/* if (UIMainMenu.isPaused &amp;&amp; GetComponent&lt;DragonMain&gt;().isPlayer) ... */" />
-                <marker date="1552414384441" expanded="true" signature="1927:2065" ph="{...}" />
-                <marker date="1552414384441" expanded="true" signature="2112:2528" ph="{...}" />
-                <marker date="1552414384441" expanded="true" signature="3029:3568" ph="{...}" />
-                <marker date="1552414384441" expanded="true" signature="4197:4636" ph="{...}" />
-                <marker date="1552414384441" expanded="true" signature="4231:4626" ph="{...}" />
-                <marker date="1552414384441" expanded="true" signature="4788:4974" ph="{...}" />
-                <marker date="1552414384441" expanded="true" signature="5583:5748" ph="{...}" />
-                <marker date="1552414384441" expanded="true" signature="5794:5879" ph="{...}" />
-                <marker date="1552414384441" expanded="true" signature="5951:6112" ph="{...}" />
+                <marker date="1552414850911" expanded="false" signature="6:96" ph="..." />
+                <marker date="1552414850911" expanded="true" signature="145:6253" ph="{...}" />
+                <marker date="1552414850911" expanded="true" signature="660:809" ph="{...}" />
+                <marker date="1552414850911" expanded="true" signature="847:1494" ph="{...}" />
+                <marker date="1552414850911" expanded="true" signature="893:1353" ph="{...}" />
+                <marker date="1552414850911" expanded="true" signature="1169:1343" ph="{...}" />
+                <marker date="1552414850911" expanded="true" signature="1395:1488" ph="{...}" />
+                <marker date="1552414850911" expanded="true" signature="1533:1660" ph="{...}" />
+                <marker date="1552414850911" expanded="true" signature="1683:5658" ph="{...}" />
+                <marker date="1552414850911" expanded="true" signature="1693:1780" ph="/* if (UIMainMenu.isPaused &amp;&amp; GetComponent&lt;DragonMain&gt;().isPlayer) ... */" />
+                <marker date="1552414850911" expanded="true" signature="1876:2087" ph="{...}" />
+                <marker date="1552414850911" expanded="true" signature="2164:2204" ph="{...}" />
+                <marker date="1552414850911" expanded="true" signature="2251:2667" ph="{...}" />
+                <marker date="1552414850911" expanded="true" signature="3168:3707" ph="{...}" />
+                <marker date="1552414850911" expanded="true" signature="4336:4775" ph="{...}" />
+                <marker date="1552414850911" expanded="true" signature="4370:4765" ph="{...}" />
+                <marker date="1552414850911" expanded="true" signature="4927:5113" ph="{...}" />
+                <marker date="1552414850911" expanded="true" signature="5722:5887" ph="{...}" />
+                <marker date="1552414850911" expanded="true" signature="5933:6018" ph="{...}" />
+                <marker date="1552414850911" expanded="true" signature="6090:6251" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -469,12 +470,12 @@
       <workItem from="1552294218323" duration="2120000" />
       <workItem from="1552318786422" duration="1799000" />
       <workItem from="1552384140870" duration="706000" />
-      <workItem from="1552385517587" duration="9362000" />
+      <workItem from="1552385517587" duration="9867000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81104000" />
+    <option name="totallyTimeSpent" value="81609000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1454,28 +1455,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/DragonMovement.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="59" column="97" lean-forward="true" selection-start-line="59" selection-start-column="97" selection-end-line="59" selection-end-column="97" />
+        <state relative-caret-position="135">
+          <caret line="63" column="72" selection-start-line="63" selection-start-column="72" selection-end-line="63" selection-end-column="72" />
           <folding>
-            <marker date="1552414384441" expanded="false" signature="6:96" ph="..." />
-            <marker date="1552414384441" expanded="true" signature="145:6114" ph="{...}" />
-            <marker date="1552414384441" expanded="true" signature="660:809" ph="{...}" />
-            <marker date="1552414384441" expanded="true" signature="847:1494" ph="{...}" />
-            <marker date="1552414384441" expanded="true" signature="893:1353" ph="{...}" />
-            <marker date="1552414384441" expanded="true" signature="1169:1343" ph="{...}" />
-            <marker date="1552414384441" expanded="true" signature="1395:1488" ph="{...}" />
-            <marker date="1552414384441" expanded="true" signature="1533:1660" ph="{...}" />
-            <marker date="1552414384441" expanded="true" signature="1683:5519" ph="{...}" />
-            <marker date="1552414384441" expanded="true" signature="1693:1780" ph="/* if (UIMainMenu.isPaused &amp;&amp; GetComponent&lt;DragonMain&gt;().isPlayer) ... */" />
-            <marker date="1552414384441" expanded="true" signature="1927:2065" ph="{...}" />
-            <marker date="1552414384441" expanded="true" signature="2112:2528" ph="{...}" />
-            <marker date="1552414384441" expanded="true" signature="3029:3568" ph="{...}" />
-            <marker date="1552414384441" expanded="true" signature="4197:4636" ph="{...}" />
-            <marker date="1552414384441" expanded="true" signature="4231:4626" ph="{...}" />
-            <marker date="1552414384441" expanded="true" signature="4788:4974" ph="{...}" />
-            <marker date="1552414384441" expanded="true" signature="5583:5748" ph="{...}" />
-            <marker date="1552414384441" expanded="true" signature="5794:5879" ph="{...}" />
-            <marker date="1552414384441" expanded="true" signature="5951:6112" ph="{...}" />
+            <marker date="1552414850911" expanded="false" signature="6:96" ph="..." />
+            <marker date="1552414850911" expanded="true" signature="145:6253" ph="{...}" />
+            <marker date="1552414850911" expanded="true" signature="660:809" ph="{...}" />
+            <marker date="1552414850911" expanded="true" signature="847:1494" ph="{...}" />
+            <marker date="1552414850911" expanded="true" signature="893:1353" ph="{...}" />
+            <marker date="1552414850911" expanded="true" signature="1169:1343" ph="{...}" />
+            <marker date="1552414850911" expanded="true" signature="1395:1488" ph="{...}" />
+            <marker date="1552414850911" expanded="true" signature="1533:1660" ph="{...}" />
+            <marker date="1552414850911" expanded="true" signature="1683:5658" ph="{...}" />
+            <marker date="1552414850911" expanded="true" signature="1693:1780" ph="/* if (UIMainMenu.isPaused &amp;&amp; GetComponent&lt;DragonMain&gt;().isPlayer) ... */" />
+            <marker date="1552414850911" expanded="true" signature="1876:2087" ph="{...}" />
+            <marker date="1552414850911" expanded="true" signature="2164:2204" ph="{...}" />
+            <marker date="1552414850911" expanded="true" signature="2251:2667" ph="{...}" />
+            <marker date="1552414850911" expanded="true" signature="3168:3707" ph="{...}" />
+            <marker date="1552414850911" expanded="true" signature="4336:4775" ph="{...}" />
+            <marker date="1552414850911" expanded="true" signature="4370:4765" ph="{...}" />
+            <marker date="1552414850911" expanded="true" signature="4927:5113" ph="{...}" />
+            <marker date="1552414850911" expanded="true" signature="5722:5887" ph="{...}" />
+            <marker date="1552414850911" expanded="true" signature="5933:6018" ph="{...}" />
+            <marker date="1552414850911" expanded="true" signature="6090:6251" ph="{...}" />
           </folding>
         </state>
       </provider>
