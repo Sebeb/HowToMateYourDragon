@@ -469,12 +469,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 123}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2dc177e081c044d09e11f6575e3ff7f, type: 3}
+  m_Script: {fileID: 11500000, guid: 419c3990dfc8fec4bae91eed7c49867b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 0
   isPlayer: 0
-  randomise: 1
+  randomise: 0
   currentHorns: 0
   currentWings: 0
   currentTail: 0

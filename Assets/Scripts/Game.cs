@@ -23,7 +23,6 @@ public class Game : MonoBehaviour
     public int gameStartTime;
     public int secondsRemaining;
     public int gameLengthSeconds;
-    public GameObject playerPrefab;
     //public DragonMain thePlayer;
     public Color[] dragonColours;
     public DragonMain target;
