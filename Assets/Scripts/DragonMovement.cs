@@ -62,10 +62,7 @@ public class DragonMovement : MonoBehaviourPun {
         if (dragon.isPlayer)
         {
             if (!photonView.IsMine && PhotonNetwork.IsConnected) return;
-            if (Input.GetButton("Boost"))
-                Boost(true);
-            else
-                Boost(false);
+            Boost(Input.GetButton("Boost"));
         }
         else if (!PhotonNetwork.IsMasterClient && PhotonNetwork.IsConnected)
         {

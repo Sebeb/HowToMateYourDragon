@@ -47,13 +47,12 @@ public class MultiplayerManager : MonoBehaviourPunCallbacks
     public void LeaveRoom()
     {
         print("Trying to leave room");
-        FireballScript[] fireballsOfPlayer = Game.FireballParent.GetComponentsInChildren<FireballScript>();
+        FireballScript[] fireballsOfPlayer = Game.player.GetComponent<Attack>().fireballList.ToArray();
         if (fireballsOfPlayer != null)
         {
             foreach (FireballScript fireballScript in fireballsOfPlayer)
             {
-                if (fireballScript.owner == Game.player.gameObject)
-                    Destroy(fireballScript.gameObject);
+                Destroy(fireballScript.gameObject);
             }
         }
         PhotonNetwork.Destroy(Game.player.gameObject);

@@ -12,7 +12,6 @@ public class Game : MonoBehaviour
     public static DragonMain player;
     public static Rigidbody2D rb;
     public static Animator anim;
-    public static GameObject FireballParent;
     public GameObject PlayerPref;
     private static string playerDataPath = "Assets/GameData/";
     private static string playerDataName = "PlayerData.txt";
@@ -165,10 +164,6 @@ public class Game : MonoBehaviour
             //go.GetComponent<Animator>().SetBool("gameStarted", true);
         }
         gameStartTime = (int)Time.unscaledTime;
-        if (FireballParent == null)
-        {
-            FireballParent = new GameObject("Fireballs");
-        }
     }
 
     void RandomiseIdealDragon(){

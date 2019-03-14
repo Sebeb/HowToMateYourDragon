@@ -1,20 +1,33 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
 
 public class FireballScript : MonoBehaviour {
+    public static GameObject FireballParent;
     public float speed;
     public float lifespan;
     public float damage;
-    public bool shouldGrow = true;
+    public bool hasBeenReleased;
+
+    private bool destroyInitiated;
     // Public string owner;
     public GameObject owner;
     private DragonMain ownerScript;
     public float growingTimer;
     public float maxGrowingTime = 1.5f;
 
-	// Use this for initialization
+    private void Awake()
+    {
+        
+        if (FireballParent == null)
+        {
+            FireballParent = PhotonNetwork.Instantiate("Fireballs", Vector3.zero, Quaternion.identity);
+        }
+    }
+
+    // Use this for initialization
 	void Start ()
     {
         ownerScript = owner.GetComponent<DragonMain>();
@@ -22,8 +35,8 @@ public class FireballScript : MonoBehaviour {
 	
     IEnumerator Lifetime(){
         yield return new WaitForSeconds(lifespan);
-        Destroy(transform.parent.gameObject);
-        Destroy(gameObject);
+        DestroyFireball();
+        //Photon.Destroy(gameObject);
     }
 
     private bool IsFireballManager()
@@ -49,15 +62,15 @@ public class FireballScript : MonoBehaviour {
     {
         if (!IsFireballManager()) return;
 
-        if (!shouldGrow)
+        if (hasBeenReleased)
         {
-            transform.localPosition += Vector3.right * speed * Time.deltaTime;
-            StartCoroutine(Lifetime());
-            transform.parent.parent = Game.FireballParent.transform;
-        }
+            float zRot = (float)(transform.eulerAngles.z / 360f * 2f * Math.PI);
+            transform.localPosition += speed * Time.deltaTime * (Vector3.right * (float)Math.Cos(zRot)
+                                       + Vector3.up * (float)Math.Sin(zRot));
+        } 
         else
         {
-            if (growingTimer > 0)
+        if (growingTimer > 0)
             {
                 growingTimer -= Time.deltaTime;
                 //transform.localScale += 5 * Vector3.one * Time.deltaTime / 6;
@@ -66,38 +79,42 @@ public class FireballScript : MonoBehaviour {
                 //for (int i = 0; i < transform.GetComponentsInChildren<Particle>().Length; i++)
                 //    transform.GetComponentsInChildren<Particle>()[i].size += 5 * Time.deltaTime / 6;
             }
-            shouldGrow = owner.GetComponent<Attack>().ReleaseFireball();
-            if (!shouldGrow)
-            {
-                damage *= 0.5f + ((maxGrowingTime - growingTimer) / maxGrowingTime) / 2;
-                DragonMovement DG = owner.GetComponent<DragonMovement>();
-                damage *=  DG.velocityMag / DG.terminalVelocity;
-                transform.GetChild(0).gameObject.SetActive(true);
-                if (owner.GetComponent<DragonMain>().isPlayer)
-                    CameraShaker.Shake(3);
-            }
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    public void ReleaseFireball()
+    {
+        StartCoroutine(Lifetime());
+        transform.parent = FireballParent.transform;
+        hasBeenReleased = true;
+        damage *= 0.5f + ((maxGrowingTime - growingTimer) / maxGrowingTime) / 2;
+        DragonMovement dm = owner.GetComponent<DragonMovement>();
+        damage *=  dm.velocityMag / dm.terminalVelocity;
+        transform.GetChild(0).gameObject.SetActive(true);
+        if (owner.GetComponent<DragonMain>().isPlayer)
+            CameraShaker.Shake(3);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (!IsFireballManager()) return;
+        if (!hasBeenReleased || other.gameObject == owner) return;
+        Attack oAttack = other.gameObject.GetComponent<Attack>();
+        if (oAttack != null)
+        {
+            oAttack.GetHit((int)damage, ownerScript);
+            //DestroyFireball();
+        }
+
         
-        if (shouldGrow)
-            return;
-        if (other.gameObject.name == owner.name)
-            return;
-        if (other.gameObject.GetComponent<Attack>() != null)
-        {
-            other.gameObject.GetComponent<Attack>().GetHit((int)damage, owner.name);
-            Destroy(gameObject);
-        }
-        if (other.gameObject.GetComponent<FireballScript>() != null)
-        {
-            print("Hit another fireball!");
-            Destroy(other.gameObject);
-            Destroy(gameObject);
-            // should cause an explosion
-        }
+        // todo: 2 fireballs colliding should cause an explosion
+        if (other.gameObject.GetComponent<FireballScript>() == null) return;
+        //Destroy(other.gameObject);
+        DestroyFireball();
+    }
+
+    public void DestroyFireball()
+    {
+        Destroy(gameObject);
     }
 }

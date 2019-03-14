@@ -423,11 +423,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FireballPref: {fileID: 1016436880440680, guid: e09375d91a137c249ad36daa5d4d4bf1,
     type: 3}
-  fireballSpeed: 130
+  fireballList: []
   fireballCd: 1
-  readyToFire: 1
-  fireballLifespan: 2
-  mouthPos: {x: 7, y: 2, z: 0}
+  fireballLifespan: 1.5
+  shouldFire: 0
+  shouldRelease: 0
 --- !u!114 &639
 MonoBehaviour:
   m_ObjectHideFlags: 0

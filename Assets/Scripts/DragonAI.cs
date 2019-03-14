@@ -116,8 +116,11 @@ public class DragonAI : MonoBehaviour {
         memorycooldown = memoryreset;
         if (mood == moods.aggressive) {  // If aggressive and can see player, target them (horns/fire)
 
-            if (fire) {
-                attack.Fire(true);
+            if (fire)
+            {
+                attack.shouldFire = true;
+                attack.shouldRelease = true;
+                //attack.Fire(true);
             }
 
             /*if (boost) {
