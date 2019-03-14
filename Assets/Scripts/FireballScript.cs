@@ -108,7 +108,10 @@ public class FireballScript : MonoBehaviour {
 
         
         // todo: 2 fireballs colliding should cause an explosion
-        if (other.gameObject.GetComponent<FireballScript>() == null) return;
+        if (other.gameObject.GetComponent<FireballScript>() != null)
+        {
+            // big explosion
+        }
         //Destroy(other.gameObject);
         DestroyFireball();
     }
