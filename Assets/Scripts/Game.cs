@@ -210,7 +210,9 @@ public class Game : MonoBehaviour
         spawnedDragons.Add(newDragon);
         newDragon.transform.parent = enemies.transform;
         newDragon.name = "EnemyNPC";
-        newDragon.GetComponent<DragonMain>().GetAttributes();
+        DragonMain newDragonScript = newDragon.GetComponent<DragonMain>();
+        newDragonScript.isPlayer = false;
+        newDragonScript.GetAttributes();
         newDragon.SetActive(activate);
         newDragon.GetComponent<Animator>().SetBool("gameStarted", true);
         if (setProperty){

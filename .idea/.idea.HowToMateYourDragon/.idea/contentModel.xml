@@ -14,8 +14,6 @@
             </e>
           </e>
         </e>
-        <e p="CollectedPropertiesStack.cs" t="Include" />
-        <e p="CollectedPropertyToken.cs" t="Include" />
         <e p="Controller Tester" t="Include">
           <e p="Scripts" t="Include">
             <e p="DetectUnknownControllerMappings.cs" t="Include" />
@@ -27,8 +25,6 @@
         <e p="GameData" t="Include">
           <e p="PlayerData.txt" t="Include" />
         </e>
-        <e p="HealthHUD.cs" t="Include" />
-        <e p="MenuDragonController.cs" t="Include" />
         <e p="Photon" t="Include">
           <e p="PhotonChat" t="Include">
             <e p="Code" t="Include">
@@ -358,21 +354,25 @@
           <e p="Attack.cs" t="Include" />
           <e p="CameraFollow.cs" t="Include" />
           <e p="CameraShaker.cs" t="Include" />
+          <e p="CollectedPropertiesStack.cs" t="Include" />
+          <e p="CollectedPropertyToken.cs" t="Include" />
           <e p="DragonAI.cs" t="Include" />
           <e p="DragonAnimationBehaviour.cs" t="Include" />
           <e p="DragonMain.cs" t="Include" />
           <e p="DragonMovement.cs" t="Include" />
           <e p="FireballScript.cs" t="Include" />
           <e p="Game.cs" t="Include" />
+          <e p="HealthHUD.cs" t="Include" />
           <e p="HornyScript.cs" t="Include" />
+          <e p="MenuDragonController.cs" t="Include" />
           <e p="MoveObjectToNewScene.cs" t="Include" />
           <e p="MultiplayerManager.cs" t="Include" />
           <e p="NetworkLauncher.cs" t="Include" />
           <e p="PlayerNetworker.cs" t="Include" />
+          <e p="UIEmoji.cs" t="Include" />
           <e p="UIMainMenu.cs" t="Include" />
+          <e p="VideoSkip.cs" t="Include" />
         </e>
-        <e p="UIEmoji.cs" t="Include" />
-        <e p="VideoSkip.cs" t="Include" />
       </e>
       <e p="HowToMateYourDragon.sln" t="IncludeFlat" />
       <e p="Library" t="ExcludeRecursive" />

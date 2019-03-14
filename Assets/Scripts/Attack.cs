@@ -144,7 +144,7 @@ public class Attack : MonoBehaviour, IPunObservable {
         //print(fireballInMouth);
         dragon.fireballInMouth = false;
         dragon.currentHealth -= incDamage;
-        if (dragon.isPlayer)
+        if (dragon.isPlayer && dragon.photonView.IsMine)
             CameraShaker.Shake(12);
         else
             Game.controller.target = dragon;
@@ -155,7 +155,7 @@ public class Attack : MonoBehaviour, IPunObservable {
     private void Die(DragonMain attacker)
     {
         attacker.AbsorbAttributes(dragon);
-        if (dragon.isPlayer)
+        if (dragon.isPlayer && dragon.photonView.IsMine)
         {
             Game.controller.Lose();
             print("Leaving the room because the player died");
@@ -164,6 +164,7 @@ public class Attack : MonoBehaviour, IPunObservable {
         }
         else
         {
+            if (dragon.isPlayer) return;
             //todo: might be PhotonNetwork.Destroy
             Destroy(gameObject);
         }

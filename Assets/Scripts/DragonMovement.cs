@@ -81,6 +81,7 @@ public class DragonMovement : MonoBehaviourPun {
             boost = Mathf.Clamp(boost + boostCharge * Time.fixedDeltaTime, 0, dragon.boostEnergy);
         }
 
+        if (!photonView.IsMine && PhotonNetwork.IsConnected) return;
         //Core Movement
         if(dragon.isPlayer && !Game.controller.mouseControl && !pathCorrection && movementEnabled)
             Move(Input.GetAxis ("Vertical"));

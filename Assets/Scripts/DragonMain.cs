@@ -18,7 +18,7 @@ using Random = UnityEngine.Random;
     [NonSerialized]public float dexterity = 1;
     [NonSerialized]public float baseHornDamage = 1;
     // todo: set the variable in this script instead of in the editor (eg by naming the GO), then remove Enemy Prefab
-    public bool isPlayer;
+    [NonSerialized] public bool isPlayer = true;
 
     public Game.Elements currentHorns;
     [NonSerialized]public Game.Elements storedHorns;

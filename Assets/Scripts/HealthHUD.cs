@@ -26,7 +26,7 @@ public class HealthHUD : MonoBehaviour {
 	void LateUpdate()
 	{
 		if (player)
-			image.fillAmount = (float) Game.player.currentHealth / (float) Game.player.maxHealth;
+			image.fillAmount = Game.player.currentHealth / (float) Game.player.maxHealth;
 		else if (Game.controller.target != null)
 		{
 			image.enabled = true;
