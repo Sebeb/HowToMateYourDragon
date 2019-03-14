@@ -111,7 +111,6 @@ public class Attack : MonoBehaviour, IPunObservable {
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        print("writing: " + stream.IsWriting);
         if (stream.IsWriting)
         {
             //if (shouldFire || shouldRelease)

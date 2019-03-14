@@ -60,8 +60,6 @@ public class FireballScript : MonoBehaviour {
 
 	void FixedUpdate ()
     {
-        if (!IsFireballManager()) return;
-
         if (hasBeenReleased)
         {
             float zRot = (float)(transform.eulerAngles.z / 360f * 2f * Math.PI);
@@ -70,8 +68,9 @@ public class FireballScript : MonoBehaviour {
         } 
         else
         {
-        if (growingTimer > 0)
-            {
+            if (!IsFireballManager()) return;
+            if (growingTimer > 0)
+                {
                 growingTimer -= Time.deltaTime;
                 //transform.localScale += 5 * Vector3.one * Time.deltaTime / 6;
                 //for (int i = 0; i < transform.childCount; i++)
