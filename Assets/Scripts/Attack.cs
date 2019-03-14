@@ -70,7 +70,7 @@ public class Attack : MonoBehaviour, IPunObservable {
         //{
         if (dragon.isPlayer && Input.GetButtonDown("Fire1") && readyToFire)
             shouldFire = true;
-        if (Input.GetButtonUp("Fire1"))
+        if (Input.GetButtonUp("Fire1") && currentFireball != null)
         {
             shouldRelease = true;
         }
@@ -89,6 +89,7 @@ public class Attack : MonoBehaviour, IPunObservable {
         Vector3 currentDirection = gameObject.GetComponent<Rigidbody2D>().velocity;
         //currentFireball.transform.eulerAngles = currentDirection;
         currentFireball.speed = fireballSpeed * currentDirection.magnitude;
+        currentFireball = null;
     }
 
     private void HandleInput()
