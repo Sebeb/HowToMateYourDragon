@@ -54,6 +54,7 @@ public class Game : MonoBehaviour
         {
             player = PhotonNetwork.Instantiate(PlayerPref.name, Vector2.zero, Quaternion.identity)
                 .GetComponent<DragonMain>();
+            player.gameObject.name = PhotonNetwork.NickName;
         }
         else
         {
