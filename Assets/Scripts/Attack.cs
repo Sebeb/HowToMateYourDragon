@@ -114,12 +114,12 @@ public class Attack : MonoBehaviour, IPunObservable {
         print("writing: " + stream.IsWriting);
         if (stream.IsWriting)
         {
-            if (shouldFire || shouldRelease)
-            {
+            //if (shouldFire || shouldRelease)
+            //{
                 //stream.SendNext(player.currentHealth);
                 stream.SendNext(shouldFire);
                 stream.SendNext(shouldRelease);
-            }
+            //}
         }
         else
         {
