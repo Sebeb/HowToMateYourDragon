@@ -1540,7 +1540,7 @@ MonoBehaviour:
   idealColour: 0
   hatesColour: 0
   spawnedDragons: []
-  dragonsPerLevel: 1
+  dragonsPerLevel: 0
   enemy: {fileID: 1151377324776180, guid: b02ee2c602abd42f4a93baddd0925811, type: 3}
   highscores: 
   enemies: {fileID: 0}

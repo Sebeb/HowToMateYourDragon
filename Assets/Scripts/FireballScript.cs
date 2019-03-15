@@ -50,7 +50,7 @@ public class FireballScript : MonoBehaviour {
         else
         {
             print(ownerScript.gameObject.name + " " + ownerScript.photonView);
-            if (!ownerScript.photonView.IsMine && PhotonNetwork.IsConnected)
+            if (ownerScript == null || !ownerScript.photonView.IsMine && PhotonNetwork.IsConnected)
             {
                 return false;
             }

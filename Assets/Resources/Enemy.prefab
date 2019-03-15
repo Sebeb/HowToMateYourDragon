@@ -474,7 +474,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 100
-  isPlayer: 0
   currentHorns: 0
   currentWings: 0
   currentTail: 0
