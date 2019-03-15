@@ -49,7 +49,7 @@ public class FireballScript : MonoBehaviour {
         }
         else
         {
-            print(ownerScript.gameObject.name + " " + ownerScript.photonView);
+            //print(ownerScript.gameObject.name + " " + ownerScript.photonView);
             if (ownerScript == null || !ownerScript.photonView.IsMine && PhotonNetwork.IsConnected)
             {
                 return false;
@@ -89,7 +89,8 @@ public class FireballScript : MonoBehaviour {
         hasBeenReleased = true;
         damage *= 0.5f + ((maxGrowingTime - growingTimer) / maxGrowingTime) / 2;
         DragonMovement dm = owner.GetComponent<DragonMovement>();
-        damage *=  dm.velocityMag / dm.terminalVelocity;
+        //damage *=  dm.velocityMag / dm.terminalVelocity;
+        damage *=  GetComponent<Rigidbody2D>().velocity.magnitude / dm.terminalVelocity;
         transform.GetChild(0).gameObject.SetActive(true);
         if (owner.GetComponent<DragonMain>().isPlayer)
             CameraShaker.Shake(3);
