@@ -97,7 +97,7 @@ public class FireballScript : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!IsFireballManager()) return;
+        //if (!IsFireballManager()) return;
         if (!hasBeenReleased || other.gameObject == owner) return;
         Attack oAttack = other.gameObject.GetComponent<Attack>();
         if (oAttack != null)

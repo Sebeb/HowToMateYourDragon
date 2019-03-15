@@ -422,7 +422,7 @@
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/MPIE" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../MPIE" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -482,12 +482,12 @@
       <workItem from="1552385517587" duration="15299000" />
       <workItem from="1552480259364" duration="9594000" />
       <workItem from="1552546015353" duration="11829000" />
-      <workItem from="1552574927327" duration="11846000" />
+      <workItem from="1552574927327" duration="11855000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120310000" />
+    <option name="totallyTimeSpent" value="120319000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -500,7 +500,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1435" height="772" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25308195" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
